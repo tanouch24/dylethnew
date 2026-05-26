@@ -3154,3 +3154,164 @@ h3 {
   /* Sector grid 1 colonne sur très petit */
   .sector-grid { grid-template-columns: 1fr; }
 }
+
+/* ── BADGES APP STORE / GOOGLE PLAY ── */
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 158px;
+  min-height: 50px;
+  padding: 9px 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.42);
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01)), #050507;
+  color: #fff;
+  text-decoration: none;
+  transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.07);
+}
+
+.store-badge:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.72);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.09);
+}
+
+.badge-logo {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.badge-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.badge-text small {
+  font-size: 9px;
+  font-weight: 400;
+  opacity: 0.72;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.badge-text strong {
+  font-size: 17px;
+  font-weight: 660;
+  letter-spacing: 0.01em;
+}
+
+/* Masquer les anciens éléments de badge */
+.store-badge > span:not(.badge-text),
+.store-icon, .store-svg,
+.store-badge small:not(.badge-text small),
+.store-badge span:last-child:not(.badge-text) { display: none; }
+
+/* ── ANIMATION DES DOTS — feature-panel ── */
+.feature-panel li::before {
+  animation: dotPulse 3.4s ease-in-out infinite;
+}
+.feature-panel li:nth-child(2)::before { animation-delay: -0.85s; }
+.feature-panel li:nth-child(3)::before { animation-delay: -1.7s; }
+.feature-panel li:nth-child(4)::before { animation-delay: -2.55s; }
+
+@keyframes dotPulse {
+  0%, 100% {
+    border-color: rgba(90,200,250,0.45);
+    box-shadow: inset 0 0 0 4px rgba(90,200,250,0.08);
+  }
+  50% {
+    border-color: rgba(90,200,250,1);
+    box-shadow: inset 0 0 0 4px rgba(90,200,250,0.22),
+                0 0 0 5px rgba(90,200,250,0.07),
+                0 0 14px rgba(90,200,250,0.35);
+  }
+}
+
+/* ── ANIMATION DU FOND ── */
+@keyframes bgGlow {
+  0%, 100% { opacity: 0.75; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.06); }
+}
+
+.home-hero::before {
+  animation: bgGlow 9s ease-in-out infinite;
+}
+
+/* Glow lent sur la section menace */
+.threat-orbit span {
+  animation: orbitDrift 32s ease-in-out infinite;
+}
+
+/* Hero wave dots animés */
+.hero-wave::after {
+  animation: waveDrift 22s linear infinite;
+}
+
+/* Icône feature: glow plus visible */
+.feature-icon {
+  box-shadow: 0 0 0 8px rgba(10,132,255,0.04),
+              inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+/* ── RESPONSIVE SUITE ── */
+
+/* Mobile : badges pleine largeur + centrés */
+@media (max-width: 980px) {
+  .store-badge {
+    min-width: 0;
+    flex: 1 1 auto;
+    justify-content: center;
+    max-width: 240px;
+  }
+  .store-actions { justify-content: center; flex-wrap: wrap; gap: 10px; }
+}
+
+@media (max-width: 560px) {
+  .store-badge {
+    width: 100%;
+    max-width: 100%;
+    min-height: 46px;
+  }
+  .store-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  /* Feature panel : padding réduit, texte plus petit */
+  .feature-panel { padding: 28px 20px; }
+  .feature-panel li { font-size: 17px; padding: 14px 0 14px 26px; }
+  .feature-panel li::before { width: 12px; height: 12px; top: 20px; }
+
+  /* Feature copy : padding réduit */
+  .feature-copy { padding: 28px 20px; }
+  .feature-copy p { font-size: 17px; }
+
+  /* Cards padding */
+  .cards article { padding: 28px 20px; }
+  .hub-card { padding: 28px 20px; min-height: 200px; }
+
+  /* Signature band */
+  .module-rail::before { display: none; }
+
+  /* Sector grid : déjà 1 col, vérifier le gap */
+  .sector-grid { gap: 8px; }
+  .sector-grid a { padding: 18px 16px; }
+
+  /* CTA band */
+  .cta-band { padding: 40px 18px; }
+  .cta-band h2 { font-size: clamp(26px, 8vw, 40px); }
+
+  /* Story flow */
+  .story-flow article { padding: 24px 18px; min-height: 160px; }
+  .story-flow span { margin-bottom: 32px; }
+
+  /* Metric strip 1 col */
+  .metric-strip { grid-template-columns: 1fr; }
+  .metric-strip div { border-right: 0; }
+}
