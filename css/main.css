@@ -3005,3 +3005,599 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ================================================================
+   DYLETH — SIGNAL INTELLIGENCE EDITION
+   Palette : or ambré · Typo : Syne · Animations avancées
+   ================================================================ */
+
+/* 1. Nouvelle palette — or ambré au lieu du bleu iOS */
+:root {
+  --bg: #06060C;
+  --bg-soft: #0A0A16;
+  --gold: #C8A44C;
+  --gold-light: #DCBA72;
+  --gold-pale: rgba(200, 164, 76, 0.1);
+  --teal: #52BEB4;
+  --green: #2DC98A;
+  --red: #CC3333;
+  --blue: #C8A44C;
+  --blue-deep: #8A6E2A;
+  --cyan: #52BEB4;
+  --line: rgba(200, 164, 76, 0.13);
+  --line-strong: rgba(200, 164, 76, 0.28);
+  --line-dark: rgba(6, 6, 12, 0.16);
+  --glass: rgba(200, 164, 76, 0.042);
+  --glass-2: rgba(200, 164, 76, 0.02);
+  --shadow: 0 44px 110px rgba(0, 0, 0, 0.72);
+  --ink: #EDE8D5;
+  --ink-soft: rgba(237, 232, 213, 0.65);
+  --ink-faint: rgba(237, 232, 213, 0.38);
+  --paper: #F0EBD8;
+  --paper-ink: #100E1C;
+  --paper-soft: rgba(16, 14, 28, 0.58);
+}
+
+/* 2. Typographie Syne + DM Sans */
+body {
+  font-family: 'DM Sans', -apple-system, system-ui, sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Syne', system-ui, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+.launch-badge, .eyebrow {
+  font-family: 'Syne Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.13em;
+}
+
+.score, .score-label, .metric-strip strong,
+.threat-cards strong, .scan-row, .phone-brand {
+  font-family: 'Syne Mono', monospace;
+}
+
+.brand span {
+  font-family: 'Syne', system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+/* 3. Fond diagonal — motif ambré */
+body {
+  background:
+    radial-gradient(ellipse 70% 45% at 90% -5%, rgba(200,164,76,0.09), transparent),
+    radial-gradient(ellipse 55% 38% at 5% 9%, rgba(82,190,180,0.045), transparent),
+    var(--bg);
+}
+
+body::before {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(200, 164, 76, 0.028) 0,
+    rgba(200, 164, 76, 0.028) 1px,
+    transparent 1px,
+    transparent 24px
+  );
+  background-size: 24px 24px;
+  mask-image: none;
+  opacity: 1;
+}
+
+body::after {
+  background:
+    linear-gradient(180deg, rgba(6,6,12,0) 0%, var(--bg) 78%),
+    repeating-linear-gradient(115deg, rgba(200,164,76,0.012) 0 1px, transparent 1px 20px);
+  opacity: 0.58;
+}
+
+/* 4. Header — ligne ambrée */
+.site-header {
+  background: linear-gradient(180deg, rgba(6,6,12,0.9), rgba(6,6,12,0.72));
+  border-bottom-color: rgba(200,164,76,0.1);
+}
+
+.site-header::after {
+  background: linear-gradient(90deg, transparent, rgba(200,164,76,0.52), transparent);
+  opacity: 0.65;
+}
+
+.brand img {
+  filter: drop-shadow(0 0 12px rgba(200,164,76,0.42));
+}
+
+.desktop-nav a:hover,
+.desktop-nav a[aria-current="page"] {
+  color: var(--ink);
+  background: rgba(200,164,76,0.07);
+}
+
+.desktop-nav a[aria-current="page"]::after {
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* 5. Boutons — or */
+.btn.primary {
+  background: linear-gradient(180deg, #D4AF52, #8A6E2A);
+  box-shadow: 0 18px 46px rgba(200,164,76,0.28);
+}
+
+.header-cta, .mobile-cta {
+  background: linear-gradient(180deg, #D4AF52, #9A7830);
+  box-shadow: 0 12px 34px rgba(200,164,76,0.22);
+}
+
+.store-badge:hover {
+  border-color: rgba(200,164,76,0.9);
+  box-shadow: 0 18px 48px rgba(200,164,76,0.14);
+}
+
+/* 6. Hero h1 — typographie dramatique en 3 lignes */
+.home .hero-copy h1 {
+  font-size: clamp(52px, 7vw, 104px);
+  line-height: 0.96;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-shadow: none;
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+
+.home .hero-copy h1::after {
+  display: none;
+}
+
+.h1-outline {
+  display: block;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(200, 164, 76, 0.78);
+}
+
+.h1-accent {
+  display: block;
+  background: linear-gradient(105deg, #C8A44C 0%, #E4C878 50%, #C8A44C 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerGold 5s linear infinite;
+}
+
+.h1-plain {
+  display: block;
+  color: var(--ink);
+  -webkit-text-fill-color: var(--ink);
+}
+
+@keyframes shimmerGold {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* 7. Radar ring — derrière le téléphone */
+.radar-ring {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: min(500px, 90vw);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.radar-ring span {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(200,164,76,0.12);
+}
+
+.radar-ring span:nth-child(1) { inset: 0; }
+.radar-ring span:nth-child(2) { inset: 18%; border-color: rgba(200,164,76,0.17); }
+.radar-ring span:nth-child(3) { inset: 36%; border-color: rgba(200,164,76,0.24); }
+
+.radar-cross {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.radar-cross::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(200,164,76,0.09);
+}
+
+.radar-cross::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(200,164,76,0.09);
+}
+
+.radar-sweep {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  animation: radarRotate 4.5s linear infinite;
+  overflow: hidden;
+}
+
+.radar-sweep::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 270deg,
+    rgba(200,164,76,0.08) 295deg,
+    rgba(200,164,76,0.28) 358deg,
+    transparent 360deg
+  );
+}
+
+.radar-sweep::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 50%;
+  width: 1px;
+  background: linear-gradient(to top, rgba(200,164,76,0.9), rgba(200,164,76,0.1));
+  transform-origin: bottom center;
+}
+
+@keyframes radarRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Assure que le phone est au-dessus du radar */
+.device-stage { position: relative; }
+.signal-field, .phone { position: relative; z-index: 1; }
+
+/* 8. Scanline de chargement */
+.page-scanline {
+  position: fixed;
+  top: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(200,164,76,0.7) 30%,
+    #C8A44C 50%,
+    rgba(200,164,76,0.7) 70%,
+    transparent 100%
+  );
+  z-index: 9999;
+  pointer-events: none;
+  animation: pageScanline 2s cubic-bezier(0.25, 0, 0.5, 1) 0.15s forwards;
+  box-shadow: 0 0 28px rgba(200,164,76,0.8), 0 0 8px rgba(200,164,76,1);
+  opacity: 0;
+}
+
+@keyframes pageScanline {
+  0% { top: -4px; opacity: 0; }
+  4% { opacity: 1; }
+  88% { opacity: 1; }
+  100% { top: 100vh; opacity: 0; }
+}
+
+/* 9. Curseur personnalisé — point or */
+.cursor-dot {
+  display: none;
+}
+
+@media (pointer: fine) {
+  body { cursor: none; }
+  a, button, [role="button"] { cursor: none; }
+
+  .cursor-dot {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    z-index: 9998;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+    transition: width 0.22s ease, height 0.22s ease, background 0.22s ease, border 0.22s ease, box-shadow 0.22s ease;
+    box-shadow: 0 0 0 3px rgba(200,164,76,0.12), 0 0 14px rgba(200,164,76,0.55);
+    mix-blend-mode: screen;
+  }
+
+  .cursor-dot.expanded {
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid rgba(200,164,76,0.7);
+    box-shadow: 0 0 0 0 transparent, 0 0 16px rgba(200,164,76,0.28);
+  }
+}
+
+/* 10. Signal field — ambré */
+.signal-field span {
+  border-color: rgba(200,164,76,0.11);
+}
+
+/* 11. Feature icons — ambrées et teal */
+.feature-icon {
+  border-color: rgba(200,164,76,0.26);
+  background: radial-gradient(circle, rgba(200,164,76,0.09), rgba(255,255,255,0.018));
+  box-shadow: 0 0 0 8px rgba(200,164,76,0.02), inset 0 0 0 1px rgba(255,255,255,0.04);
+  color: var(--gold);
+}
+
+.feature-strip > div:nth-child(2) .feature-icon,
+.feature-strip > div:nth-child(4) .feature-icon {
+  color: var(--teal);
+  border-color: rgba(82,190,180,0.26);
+  background: radial-gradient(circle, rgba(82,190,180,0.09), rgba(255,255,255,0.018));
+}
+
+@keyframes iconBreathe {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 0 0 8px rgba(200,164,76,0.02), inset 0 0 0 1px rgba(255,255,255,0.04);
+  }
+  50% {
+    transform: translateY(-3px);
+    box-shadow: 0 0 0 12px rgba(200,164,76,0.035), inset 0 0 0 1px rgba(255,255,255,0.06);
+  }
+}
+
+/* Dots de la feature-strip */
+.feature-strip > div::after {
+  background: var(--gold);
+  box-shadow: 0 0 0 5px rgba(200,164,76,0.09), 0 0 22px rgba(200,164,76,0.9);
+}
+
+.feature-strip > div:nth-child(even)::after {
+  background: var(--teal);
+  box-shadow: 0 0 0 5px rgba(82,190,180,0.09), 0 0 22px rgba(82,190,180,0.9);
+}
+
+.feature-strip {
+  border-top-color: rgba(200,164,76,0.06);
+  border-bottom-color: rgba(200,164,76,0.06);
+}
+
+.feature-strip::before {
+  background: linear-gradient(90deg, transparent, rgba(200,164,76,0.38), rgba(82,190,180,0.3), transparent);
+  opacity: 0.26;
+}
+
+/* 12. Signature band */
+.signature-band::before {
+  background:
+    linear-gradient(90deg, transparent 0 6%, rgba(200,164,76,0.12) 6.2%, transparent 6.4% 100%),
+    repeating-linear-gradient(90deg, rgba(200,164,76,0.04) 0 1px, transparent 1px 46px);
+}
+
+/* 13. Module rail — dots ambrés */
+.module-rail a::after {
+  background: rgba(200,164,76,0.85);
+  box-shadow: 0 0 0 5px rgba(200,164,76,0.07);
+}
+
+.module-rail::before {
+  background: linear-gradient(90deg, transparent, rgba(200,164,76,0.36), rgba(82,190,180,0.22), transparent);
+}
+
+.module-icon {
+  color: rgba(200,164,76,0.84);
+}
+
+/* 14. Score ring — ambré */
+.score-ring {
+  background: conic-gradient(from 210deg, #C8A44C 0 42%, #52BEB4 42% 78%, rgba(255,255,255,0.08) 78% 100%);
+  box-shadow: 0 0 32px rgba(200,164,76,0.26);
+}
+
+.score-ring span {
+  border-left-color: #D4AF58;
+  border-bottom-color: #D4AF58;
+}
+
+.score {
+  color: #C8A44C;
+}
+
+.score-ring::before {
+  background: radial-gradient(circle at 50% 40%, rgba(200,164,76,0.12), #09101b 58%);
+}
+
+/* 15. Hero wave — ambré */
+.home-hero::before {
+  background:
+    radial-gradient(circle at 74% 42%, rgba(200,164,76,0.14), transparent 22rem),
+    conic-gradient(from 212deg at 73% 44%, transparent 0 28%, rgba(82,190,180,0.08), transparent 42% 100%);
+}
+
+.hero-wave::before {
+  background:
+    radial-gradient(ellipse at 54% 48%, rgba(200,164,76,0.16), transparent 46%),
+    repeating-radial-gradient(ellipse at 55% 48%, rgba(200,164,76,0.16) 0 1px, transparent 1px 28px),
+    linear-gradient(90deg, transparent, rgba(200,164,76,0.09), transparent);
+  opacity: 0.5;
+}
+
+.hero-wave::after {
+  background:
+    radial-gradient(circle at 18% 50%, rgba(200,164,76,0.82) 0 1px, transparent 2px),
+    radial-gradient(circle at 55% 50%, rgba(82,190,180,0.78) 0 1px, transparent 2px),
+    linear-gradient(90deg, transparent, rgba(200,164,76,0.5), rgba(82,190,180,0.18), rgba(200,164,76,0.46), transparent);
+  background-size: 22px 100%, 26px 100%, 100% 1px;
+  background-repeat: repeat-x, repeat-x, no-repeat;
+  background-position: 0 50%, 0 50%, 0 50%;
+  opacity: 0.26;
+}
+
+.hero-wave span {
+  border-color: rgba(200,164,76,0.14);
+  box-shadow: 0 0 0 34px rgba(200,164,76,0.014), 0 0 0 70px rgba(82,190,180,0.01);
+}
+
+.hero-wave span:nth-child(2) { border-color: rgba(82,190,180,0.12); }
+.hero-wave span:nth-child(3) { border-color: rgba(200,164,76,0.09); }
+
+/* 16. Section dividers */
+.section::before {
+  background: linear-gradient(90deg, transparent, rgba(200,164,76,0.22), transparent);
+}
+
+/* 17. Feature/hub cards — ligne ambrée */
+.feature-copy::before,
+.feature-panel::before,
+.hub-card::before,
+.cards article::before {
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.hub-card:hover {
+  border-color: rgba(200,164,76,0.36);
+}
+
+/* 18. CTA band */
+.cta-band {
+  background:
+    radial-gradient(circle at 50% 0, rgba(200,164,76,0.16), transparent 42%),
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border-color: rgba(200,164,76,0.14);
+}
+
+.cta-band::before {
+  border-color: rgba(200,164,76,0.11);
+}
+
+/* 19. Threat section — rouge conservé, titre en or */
+.threat-section {
+  background:
+    radial-gradient(circle at 15% 42%, rgba(204,51,51,0.07), transparent 18rem),
+    radial-gradient(circle at 82% 38%, rgba(200,164,76,0.07), transparent 20rem),
+    linear-gradient(180deg, #06070D, #06060C);
+}
+
+.threat-section h2 em {
+  color: var(--gold);
+  font-style: normal;
+}
+
+.threat-orbit span {
+  border-color: rgba(204,51,51,0.28);
+  box-shadow: 0 0 0 60px rgba(204,51,51,0.018);
+}
+
+.threat-orbit span:nth-child(2) {
+  border-color: rgba(200,164,76,0.28);
+  box-shadow: 0 0 0 60px rgba(200,164,76,0.022);
+}
+
+/* 20. Gradient text em tag */
+.hero-copy h1 em {
+  font-style: normal;
+  background: linear-gradient(100deg, #C8A44C 0%, #E4C878 88%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 21. Sector grid hover */
+.sector-grid a::after {
+  background: linear-gradient(90deg, rgba(200,164,76,0.64), transparent);
+}
+
+/* 22. Link + eyebrow colors */
+.feature-copy a, .link { color: var(--gold); }
+.launch-badge { color: rgba(200,164,76,0.9); }
+.eyebrow { color: var(--gold); }
+.story-flow span { color: var(--teal); }
+
+/* 23. Metric strip */
+.metric-strip::before {
+  background: linear-gradient(90deg, transparent, rgba(200,164,76,0.12), transparent);
+}
+
+/* 24. Overwrites pour les couleurs hardcodées */
+.feature-strip > div:nth-child(2) .feature-icon,
+.feature-strip > div:nth-child(4) .feature-icon {
+  animation-delay: -1.4s;
+}
+
+/* Scan rows OK en vert */
+.scan-row b { color: var(--green); }
+
+/* 25. Section light — papier chaud */
+.section.light {
+  background:
+    radial-gradient(circle at 80% 0, rgba(200,164,76,0.06), transparent 30rem),
+    var(--paper);
+  color: var(--paper-ink);
+}
+
+.light .cards article {
+  background: linear-gradient(180deg, #fff, #f7f4ec);
+  border-color: rgba(200,164,76,0.12);
+}
+
+/* 26. Footer */
+.site-footer {
+  background:
+    radial-gradient(circle at 12% 0, rgba(200,164,76,0.08), transparent 24rem),
+    #050508;
+}
+
+/* 27. Pulse ambré pour livingPointStrong */
+@keyframes livingPointStrong {
+  0%, 100% {
+    transform: translate(-50%, 0) scale(0.85);
+    opacity: 0.58;
+    box-shadow: 0 0 0 4px rgba(200,164,76,0.07), 0 0 12px rgba(200,164,76,0.48);
+  }
+  45% {
+    transform: translate(-50%, -8px) scale(1.12);
+    opacity: 1;
+    box-shadow: 0 0 0 11px rgba(200,164,76,0.05), 0 0 24px rgba(200,164,76,0.75);
+  }
+  70% {
+    transform: translate(-50%, 3px) scale(0.96);
+    opacity: 0.8;
+  }
+}
+
+/* 28. Lancement badge — ligne ambrée */
+.home .launch-badge::before {
+  background: linear-gradient(90deg, rgba(200,164,76,0.2), rgba(200,164,76,0.75));
+}
+
+/* 29. Animation du scan phone — ambré */
+.phone::before {
+  background: linear-gradient(180deg, rgba(200,164,76,0.0), rgba(200,164,76,0.1), rgba(200,164,76,0.0));
+}
+
+/* 30. Home hero orbit ring — ambré */
+.home-hero::after {
+  border-color: rgba(200,164,76,0.14);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.025),
+    0 0 0 76px rgba(200,164,76,0.016),
+    0 0 0 152px rgba(82,190,180,0.01);
+}
+
