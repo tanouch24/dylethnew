@@ -1,271 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DYLETH — Comment ça marche : architecture Privacy by Design, traitement local, RGPD natif. Simple, automatique, invisible.">
-  <title>Comment ça marche — DYLETH</title>
-  <link rel="stylesheet" href="css/main.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solution — DYLETH</title>
+  <meta name="description" content="Architecture DYLETH, technologie, RGPD, Privacy by Design, comparatif et FAQ.">
+  <link rel="canonical" href="https://dyleth.com/solution/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Solution — DYLETH">
+  <meta property="og:description" content="Architecture DYLETH, technologie, RGPD, Privacy by Design, comparatif et FAQ.">
+  <meta property="og:url" content="https://dyleth.com/solution/">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link rel="preload" href="/css/main.css" as="style">
+  <link rel="stylesheet" href="/css/main.css">
 </head>
-<body>
-
-<!-- NAV -->
-<nav class="nav">
-  <a href="index.html" class="nav-logo">DYLETH</a>
-  <div class="nav-links">
-    <a href="menace.html">La menace</a>
-    <a href="solution.html">Solution</a>
-    <a href="modules.html">Les 7 modules</a>
-    <a href="secteurs.html">Secteurs</a>
-    <a href="ressources.html">Ressources</a>
-  </div>
-  <button class="nav-hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-<div class="nav-mobile-menu">
-  <a href="menace.html">La menace</a>
-  <a href="solution.html">Solution</a>
-  <a href="modules.html">Les 7 modules</a>
-  <a href="secteurs.html">Secteurs</a>
-  <a href="ressources.html">Ressources</a>
-</div>
-
-<!-- HERO -->
-<section class="hero" style="padding-bottom:100px;">
-  <div class="hero-inner">
-    <span class="ap-eyebrow reveal">TECHNOLOGIE</span>
-    <h1 class="ap-h1 reveal reveal-delay-1" style="margin-top:16px;">Simple. Automatique. Invisible.</h1>
-    <p class="ap-sub reveal reveal-delay-2" style="max-width:520px;margin-left:auto;margin-right:auto;">
-      DYLETH analyse en arrière-plan, en temps réel, sans que vous ayez à y penser.
-    </p>
-  </div>
+<body class="hub-page">
+<header class="site-header">
+  <a class="brand" href="/" aria-label="DYLETH accueil"><img src="/logo.svg" alt="" width="28" height="28"><span>DYLETH</span></a>
+  <nav class="desktop-nav" aria-label="Navigation principale"><a href="/menace/" >La menace</a><a href="/solution/" >Solution</a><a href="/solution/7-modules/" >7 modules</a><a href="/secteurs/" >Secteurs</a><a href="/ressources/" >Ressources</a></nav>
+  <a class="header-cta" href="/#telecharger">Télécharger</a>
+  <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+<div class="mobile-panel" hidden><a href="/menace/">La menace</a><a href="/solution/">Solution</a><a href="/solution/7-modules/">7 modules</a><a href="/secteurs/">Secteurs</a><a href="/ressources/">Ressources</a><a class="mobile-cta" href="/#telecharger">Télécharger gratuitement</a></div>
+<main>
+<section class="page-hero compact"><div class="hero-copy reveal"><p class="eyebrow">Solution</p><h1>Une protection invisible, claire et responsable.</h1><p class="lead">DYLETH analyse les signaux de fraude sans transformer la sécurité en collecte permanente.</p></div></section><section class="hub-grid"><a class="hub-card reveal" href="/solution/7-modules/"><span>Modules</span><h2>Les 7 modules</h2><p>La protection complète contre appels, SMS, emails, URLs et WiFi.</p></a><a class="hub-card reveal" href="/solution/technologie/"><span>Technologie</span><h2>Analyse temps réel</h2><p>Architecture locale, IA propriétaire, base communautaire et minimisation.</p></a><a class="hub-card reveal" href="/solution/privacy-by-design/"><span>Privacy</span><h2>Privacy by Design</h2><p>Une approche juridique et technique pensée avant toute collecte.</p></a><a class="hub-card reveal" href="/solution/faq/"><span>FAQ</span><h2>Questions fréquentes</h2><p>Gratuité, compatibilité, confidentialité, WiFi et fonctionnement.</p></a></section><section class="cta-band reveal" id="telecharger">
+  <p class="eyebrow">Disponible début juin 2026</p>
+  <h2>Une protection claire, gratuite et prête pour le quotidien.</h2>
+  <p>DYLETH protège appels, SMS, emails, URLs et réseaux WiFi, avec une approche Privacy by Design et une infrastructure pensée pour l'Europe.</p>
+  <div class="cta-actions"><a class="btn primary" href="/#telecharger">Télécharger gratuitement</a><a class="btn secondary" href="/solution/7-modules/">Découvrir les modules</a></div>
 </section>
-
-<!-- 4 PRINCIPES TECHNIQUES -->
-<section class="section bg-dark">
-  <div class="section-inner">
-    <span class="ap-eyebrow reveal">NOTRE APPROCHE</span>
-    <h2 class="section-h2 reveal reveal-delay-1">Une architecture pensée pour la protection, pas pour la collecte.</h2>
-
-    <div class="cards-grid" style="margin-top:48px;">
-
-      <div class="card-dark reveal">
-        <div class="card-icon" style="background:rgba(41,151,255,0.1);">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2997ff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg>
-        </div>
-        <div class="card-title card-title-light">Traitement local en priorité</div>
-        <p class="card-body card-body-light">Dans la mesure du possible, l'analyse est effectuée directement sur l'appareil. Sur iOS, le filtrage SMS est entièrement local. Sur Android, seul le contenu strictement nécessaire est transmis de façon chiffrée, sans jamais être stocké.</p>
-      </div>
-
-      <div class="card-dark reveal reveal-delay-1">
-        <div class="card-icon" style="background:rgba(41,151,255,0.1);">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2997ff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <div class="card-title card-title-light">Base de signatures communautaire</div>
-        <p class="card-body card-body-light">DYLETH enrichit sa base grâce aux signalements anonymisés. À partir de 10 signalements confirmés pour un même numéro ou domaine, celui-ci est automatiquement ajouté à la liste noire partagée.</p>
-      </div>
-
-      <div class="card-dark reveal">
-        <div class="card-icon" style="background:rgba(41,151,255,0.1);">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2997ff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg>
-        </div>
-        <div class="card-title card-title-light">Intelligence artificielle propriétaire</div>
-        <p class="card-body card-body-light">Modèles d'apprentissage automatique entraînés sur des jeux de données massifs, continuellement mis à jour. Détection de patterns de fraude nouveaux et anticipation des modes opératoires émergents.</p>
-      </div>
-
-      <div class="card-dark reveal reveal-delay-1">
-        <div class="card-icon" style="background:rgba(41,151,255,0.1);">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2997ff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        </div>
-        <div class="card-title card-title-light">Open source partiel</div>
-        <p class="card-body card-body-light">Le code de filtrage est partiellement auditable. Cette transparence volontaire renforce la confiance des utilisateurs, des organismes de certification et des institutions partenaires.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- 3 ÉTAPES -->
-<section class="section bg-light">
-  <div class="section-inner">
-    <span class="ap-eyebrow reveal" style="color:var(--blue-cta);">PRISE EN MAIN</span>
-    <h2 class="section-h2 section-h2-dark reveal reveal-delay-1">En 3 étapes. Sans configuration.</h2>
-
-    <div class="steps-grid" style="margin-top:56px;">
-      <div class="reveal">
-        <div class="step-num">01</div>
-        <div class="step-title">Vous installez l'app</div>
-        <p class="step-body">2 minutes. Aucune configuration technique. Aucune carte bancaire. Disponible sur App Store et Google Play.</p>
-      </div>
-      <div class="reveal reveal-delay-1">
-        <div class="step-num">02</div>
-        <div class="step-title">DYLETH analyse</div>
-        <p class="step-body">En arrière-plan. Chaque appel, SMS, email, lien, réseau. Vous n'avez rien à faire. L'analyse est silencieuse et continue.</p>
-      </div>
-      <div class="reveal reveal-delay-2">
-        <div class="step-num">03</div>
-        <div class="step-title">Vous êtes alerté</div>
-        <p class="step-body">Notification claire avant que vous agissiez. Vous décidez en connaissance de cause. Aucun faux positif intrusif.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ENGAGEMENTS PRIVACY -->
-<section class="section bg-black">
-  <div class="section-inner">
-    <span class="ap-eyebrow reveal">NOS ENGAGEMENTS</span>
-    <h2 class="section-h2 reveal reveal-delay-1">Ce que DYLETH ne fait jamais.</h2>
-    <p class="ap-sub reveal reveal-delay-2">Un engagement architectural et juridique, pas une promesse marketing.</p>
-
-    <ul class="commitments-list reveal reveal-delay-3">
-      <li class="commitment-item">
-        <div class="commitment-icon">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </div>
-        <span class="commitment-text">Collecter le contenu de vos appels téléphoniques</span>
-      </li>
-      <li class="commitment-item">
-        <div class="commitment-icon">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </div>
-        <span class="commitment-text">Accéder à votre liste de contacts</span>
-      </li>
-      <li class="commitment-item">
-        <div class="commitment-icon">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </div>
-        <span class="commitment-text">Lire vos SMS personnels</span>
-      </li>
-      <li class="commitment-item">
-        <div class="commitment-icon">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </div>
-        <span class="commitment-text">Stocker vos emails ou leur contenu sur nos serveurs</span>
-      </li>
-      <li class="commitment-item">
-        <div class="commitment-icon">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </div>
-        <span class="commitment-text">Vendre, louer ou partager vos données personnelles avec des tiers</span>
-      </li>
-      <li class="commitment-item">
-        <div class="commitment-icon">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </div>
-        <span class="commitment-text">Afficher de la publicité dans l'application</span>
-      </li>
-      <li class="commitment-item">
-        <div class="commitment-icon">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </div>
-        <span class="commitment-text">Transférer des données hors Union européenne</span>
-      </li>
-    </ul>
-
-    <p class="reveal" style="font-size:14px;color:rgba(255,255,255,0.35);margin-top:32px;max-width:580px;margin-left:auto;margin-right:auto;">
-      Notre Délégué à la Protection des Données est joignable à <a href="mailto:dpo@dyleth.com" style="color:var(--blue-link);">dpo@dyleth.com</a>. Tout utilisateur dispose des droits d'accès, rectification, effacement, portabilité et opposition (RGPD).
-    </p>
-  </div>
-</section>
-
-<!-- INFRASTRUCTURE -->
-<div class="split">
-  <div class="split-cell bg-dark reveal">
-    <span class="ap-eyebrow">INFRASTRUCTURE</span>
-    <h2 class="split-h2">100% hébergé en France et dans l'Union européenne.</h2>
-    <p class="split-body">Soumise au droit européen de la protection des données. Conforme RGPD (UE 2016/679) article 25. Aucune donnée ne transite hors UE.</p>
-    <span class="badge-green" style="margin-top:8px;">Privacy by Design natif</span>
-  </div>
-  <div class="split-cell bg-black reveal reveal-delay-1">
-    <span class="ap-eyebrow">COMPATIBILITÉ</span>
-    <h2 class="split-h2">iOS 15+ et Android 10+. 14 langues.</h2>
-    <p class="split-body">Français, anglais, arabe, espagnol, portugais, allemand, mandarin, hindi, russe, vietnamien, turc, japonais, coréen, indonésien. Aucun SDK tiers dans le code iOS.</p>
-    <a href="modules.html" class="link-blue" style="margin-top:8px;">Voir les modules</a>
-  </div>
-</div>
-
-<!-- CITATION -->
-<section class="quote-section reveal">
-  <div class="quote-inner">
-    <span class="quote-marks">&ldquo;</span>
-    <blockquote class="quote-text">
-      La confiance numérique ne devrait pas être un privilège réservé à ceux qui ont les moyens de se payer un service premium ou les compétences techniques pour l'utiliser. Elle devrait être un droit. C'est ce que nous construisons.
-    </blockquote>
-    <p class="quote-attr">— DYLETH SAS, Livre Blanc 2026</p>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section bg-black" style="text-align:center;">
-  <div class="section-inner">
-    <span class="badge-pill reveal" style="margin-bottom:24px;">
-      <span class="dot"></span> Lancement début juin 2026
-    </span>
-    <h2 class="section-h2 reveal reveal-delay-1" style="margin-top:16px;">Téléchargez DYLETH.</h2>
-    <p class="ap-sub reveal reveal-delay-2">Gratuit. Sans engagement. Disponible sur App Store et Google Play.</p>
-    <div class="hero-actions reveal reveal-delay-3">
-      <a href="#" class="btn-primary">Télécharger gratuitement</a>
-      <a href="modules.html" class="link-blue">Voir les 7 modules</a>
-    </div>
-    <p class="cta-note reveal reveal-delay-4">iOS 15+ &middot; Android 10+ &middot; 14 langues</p>
-  </div>
-</section>
-
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <span class="trust-item">RGPD natif</span>
-  <span class="trust-item">Privacy by Design</span>
-  <span class="trust-item">Développé en France</span>
-  <span class="trust-item">Infrastructure 100% UE</span>
-  <span class="trust-item">Dépôts INPI</span>
-  <span class="trust-item">Zéro publicité</span>
-  <span class="trust-item">Zéro revente de données</span>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer">
-    <div class="footer-col">
-      <div class="footer-col-title">Produit</div>
-      <a href="modules.html">Les 7 modules</a>
-      <a href="solution.html">Comment ça marche</a>
-      <a href="solution.html">Privacy by Design</a>
-      <a href="ressources.html">Ressources</a>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Secteurs</div>
-      <a href="secteurs.html">Seniors</a>
-      <a href="secteurs.html">Familles</a>
-      <a href="secteurs.html">Professionnels</a>
-      <a href="secteurs.html">Collectivités</a>
-      <a href="secteurs.html">Voyageurs</a>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Légal</div>
-      <a href="mentions-legales.html">Mentions légales</a>
-      <a href="privacy.html">Politique de confidentialité</a>
-      <a href="cgu.html">CGU</a>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Contact</div>
-      <a href="mailto:contact@dyleth.com">contact@dyleth.com</a>
-      <a href="mailto:dpo@dyleth.com">dpo@dyleth.com</a>
-      <p>78C rue de Fontanières</p>
-      <p>69100 Villeurbanne, France</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>Copyright &copy; 2026 DYLETH SAS &mdash; SIREN 103 432 555 &mdash; Villeurbanne, France</p>
-    <div class="footer-bottom-links">
-      <a href="mentions-legales.html">Mentions légales</a>
-      <a href="privacy.html">Confidentialité</a>
-      <a href="cgu.html">CGU</a>
-    </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="/logo.svg" alt="" width="34" height="34"><strong>DYLETH</strong><p>Bouclier numérique personnel. Développé en France, pensé pour protéger sans collecter.</p></div>
+    <div class="footer-links"><div><h2>Produit</h2><a href="/solution/7-modules/">Les 7 modules</a><a href="/solution/technologie/">Technologie</a><a href="/solution/privacy-by-design/">Privacy by Design</a><a href="/solution/rgpd/">RGPD</a><a href="/solution/faq/">FAQ</a></div><div><h2>Menace</h2><a href="/menace/etat-des-lieux/">Etat des lieux</a><a href="/menace/chiffres-cles/">Chiffres clés</a><a href="/menace/types-de-fraudes/">Types de fraudes</a><a href="/menace/intelligence-artificielle/">IA et fraude</a></div><div><h2>Ressources</h2><a href="/ressources/blog/">Blog</a><a href="/comprendre/glossaire/">Glossaire</a><a href="/ressources/livre-blanc/">Livre blanc</a><a href="/ressources/newsletter/">Newsletter</a></div><div><h2>Légal</h2><a href="/legal/mentions-legales/">Mentions légales</a><a href="/legal/confidentialite/">Confidentialité</a><a href="/legal/cgu/">CGU</a><a href="/legal/cgv/">CGV Pro</a><a href="/legal/cookies/">Cookies</a></div></div>
+    <div class="footer-bottom"><span>© 2026 DYLETH SAS</span><span><a href="mailto:contact@dyleth.com">contact@dyleth.com</a> · <a href="mailto:dpo@dyleth.com">dpo@dyleth.com</a></span></div>
   </div>
 </footer>
-
-<script src="js/main.js"></script>
+<script src="/js/main.js" defer></script>
 </body>
 </html>

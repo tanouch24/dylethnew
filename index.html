@@ -1,430 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DYLETH — Premier bouclier anti-fraude numérique gratuit, développé en France. 7 modules de protection. iOS et Android. 14 langues.">
-  <title>DYLETH — Protection numérique gratuite</title>
-  <link rel="stylesheet" href="css/main.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DYLETH — Bouclier Numérique Personnel · Protection 7-en-1</title>
+  <meta name="description" content="DYLETH : bouclier numérique personnel. 7 modules de protection contre appels, SMS, emails, URLs et WiFi. Développée en France, RGPD natif, conçue pour renforcer votre sécurité numérique.">
+  <link rel="canonical" href="https://dyleth.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DYLETH — Bouclier Numérique Personnel · Protection 7-en-1">
+  <meta property="og:description" content="DYLETH : bouclier numérique personnel. 7 modules de protection contre appels, SMS, emails, URLs et WiFi. Développée en France, RGPD natif, conçue pour renforcer votre sécurité numérique.">
+  <meta property="og:url" content="https://dyleth.com/">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link rel="preload" href="/css/main.css" as="style">
+  <link rel="stylesheet" href="/css/main.css">
 </head>
-<body>
-
-<!-- NAV -->
-<nav class="nav">
-  <a href="index.html" class="nav-logo">DYLETH</a>
-  <div class="nav-links">
-    <a href="menace.html">La menace</a>
-    <a href="solution.html">Solution</a>
-    <a href="modules.html">Les 7 modules</a>
-    <a href="secteurs.html">Secteurs</a>
-    <a href="ressources.html">Ressources</a>
-  </div>
-  <button class="nav-hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-<div class="nav-mobile-menu">
-  <a href="menace.html">La menace</a>
-  <a href="solution.html">Solution</a>
-  <a href="modules.html">Les 7 modules</a>
-  <a href="secteurs.html">Secteurs</a>
-  <a href="ressources.html">Ressources</a>
-</div>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="reveal">
-      <span class="badge-pill">
-        <span class="dot"></span>
-        Disponible début juin 2026 &middot; iOS &amp; Android
-      </span>
+<body class="home">
+<header class="site-header">
+  <a class="brand" href="/" aria-label="DYLETH accueil"><img src="/logo.svg" alt="" width="28" height="28"><span>DYLETH</span></a>
+  <nav class="desktop-nav" aria-label="Navigation principale"><a href="/menace/" >La menace</a><a href="/solution/" >Solution</a><a href="/solution/7-modules/" >7 modules</a><a href="/secteurs/" >Secteurs</a><a href="/ressources/" >Ressources</a></nav>
+  <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+<div class="mobile-panel" hidden><a href="/menace/">La menace</a><a href="/solution/">Solution</a><a href="/solution/7-modules/">7 modules</a><a href="/secteurs/">Secteurs</a><a href="/ressources/">Ressources</a></div>
+<main>
+<section class="home-hero">
+  <div class="hero-wave" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="hero-copy reveal">
+    <p class="launch-badge"><span></span>Vérification silencieuse. Protection réelle.</p>
+    <div class="hero-mark">
+      <h1>Votre bouclier numérique</h1>
     </div>
-    <h1 class="ap-h1 reveal reveal-delay-1" style="margin-top:24px;">DYLETH</h1>
-    <p class="ap-sub reveal reveal-delay-2" style="max-width:600px;margin-left:auto;margin-right:auto;">
-      Premier bouclier anti-fraude numérique gratuit,<br>
-      développé en France, conçu pour le monde entier.
-    </p>
-    <p class="hero-meta reveal reveal-delay-3" style="margin-top:12px;">
-      7 modules de protection &middot; 14 langues &middot; iOS et Android
-    </p>
-    <div class="hero-actions reveal reveal-delay-4">
-      <a href="modules.html" class="btn-primary">Télécharger gratuitement</a>
-      <a href="modules.html" class="link-blue">Découvrir les 7 modules</a>
+    <p class="lead">DYLETH protège vos communications, vos liens et vos réseaux grâce à une vérification claire, silencieuse et respectueuse de vos données.</p>
+    <div class="store-actions" aria-label="Téléchargement de l'application">
+      <a class="store-badge apple" href="#" aria-label="App Store">
+        <span>App Store</span>
+      </a>
+      <a class="store-badge play" href="#" aria-label="Google Play">
+        <span>Google Play</span>
+      </a>
     </div>
   </div>
-
-  <!-- Phone mockup -->
-  <div class="phone-wrap reveal" style="transition-delay:0.5s;">
-    <div class="phone-mockup">
-      <div class="phone-notch"></div>
-      <div class="phone-screen">
-        <span class="badge-pill" style="font-size:9px;padding:4px 10px;gap:5px;">
-          <span class="dot"></span> Protection active
-        </span>
-        <div class="phone-title">DYLETH</div>
-        <div class="phone-module-row">
-          <span class="phone-mod-label">Appels</span>
-          <span class="phone-dot"></span>
-        </div>
-        <div class="phone-module-row">
-          <span class="phone-mod-label">SMS</span>
-          <span class="phone-dot"></span>
-        </div>
-        <div class="phone-module-row" style="border-color:rgba(239,68,68,0.2);background:rgba(239,68,68,0.06);">
-          <span class="phone-mod-label" style="color:#fca5a5;">Emails</span>
-          <span class="phone-dot alert"></span>
-        </div>
-        <div class="phone-module-row">
-          <span class="phone-mod-label">URLs</span>
-          <span class="phone-dot"></span>
-        </div>
-        <div class="phone-module-row">
-          <span class="phone-mod-label">WiFi</span>
-          <span class="phone-dot"></span>
-        </div>
-        <div class="phone-alert">
-          Alerte — Email suspect détecté. Expéditeur non vérifié.
-        </div>
-      </div>
-    </div>
+  <div class="device-stage reveal" aria-hidden="true">
+    <div class="signal-field"><span></span><span></span><span></span><span></span></div>
+    <div class="phone"><div class="phone-top"></div><div class="phone-screen"><div class="phone-brand"><img src="/logo.svg" alt="" width="18" height="18"><span>DYLETH</span></div><div class="score-ring"><span></span></div><h2>Aucun danger détecté</h2><p class="score-label">Score de confiance</p><strong class="score">92<small>/100</small></strong><div class="scan-panel"><div class="scan-row"><span>Appels</span><b>OK</b></div><div class="scan-row"><span>SMS</span><b>OK</b></div><div class="scan-row"><span>Emails</span><b>OK</b></div><div class="scan-row"><span>URLs</span><b>OK</b></div></div></div></div>
   </div>
 </section>
-
-<!-- SPLIT 1 — 7 modules / 0€ -->
-<div class="split">
-  <div class="split-cell bg-dark reveal">
-    <span class="split-watermark">7</span>
-    <span class="ap-eyebrow">PROTECTION COMPLÈTE</span>
-    <h2 class="split-h2">7 modules. 1 seule app.</h2>
-    <p class="split-body">Appels, SMS, emails, URLs, WiFi mobile, WiFi maison et WiFi Pro. Chaque vecteur d'attaque couvert.</p>
-    <a href="modules.html" class="link-blue">Voir les 7 modules</a>
-  </div>
-  <div class="split-cell bg-black reveal reveal-delay-1">
-    <span class="badge-green" style="margin-bottom:16px;">Gratuit &middot; Sans engagement</span>
-    <h2 class="split-h2">0&euro;. Sans compromis.</h2>
-    <p class="split-body">Aucune publicité. Aucune donnée vendue. Aucune limitation. La sécurité numérique doit être un droit, pas un privilège.</p>
-    <a href="solution.html" class="link-blue">Notre charte</a>
-  </div>
-</div>
-
-<!-- SPLIT 2 — Privacy / La menace -->
-<div class="split">
-  <div class="split-cell bg-black reveal">
-    <span class="badge-blue" style="margin-bottom:16px;">Privacy by Design &middot; RGPD natif</span>
-    <h2 class="split-h2">Vos données vous appartiennent.</h2>
-    <p class="split-body">Traitement local en priorité. Zéro revente. Infrastructure 100% hébergée en France et dans l'Union européenne. Conforme RGPD article 25.</p>
-    <a href="solution.html" class="link-blue">Nos engagements</a>
-  </div>
-  <div class="split-cell bg-dark reveal reveal-delay-1">
-    <span class="split-watermark">+159%</span>
-    <span class="ap-eyebrow">LE CONSTAT 2025</span>
-    <h2 class="split-h2">La menace est réelle et croissante.</h2>
-    <p class="split-body">500&nbsp;000+ demandes sur Cybermalveillance.gouv.fr en 2025. +70% de phishing. +159% de fraude au faux conseiller bancaire.</p>
-    <a href="menace.html" class="link-blue">Tous les chiffres</a>
-  </div>
-</div>
-
-<!-- SECTION STATS MONDIALES -->
-<section class="section bg-dark">
-  <div class="section-inner">
-    <span class="ap-eyebrow reveal">L'AMPLEUR DU PROBLÈME EN 2025</span>
-    <h2 class="section-h2 reveal reveal-delay-1">Des chiffres qui parlent d'eux-mêmes.</h2>
-    <p class="ap-sub reveal reveal-delay-2" style="font-size:13px;margin-top:10px;">
-      Sources : Cybersecurity Ventures, FBI IC3 Report 2025, Cybermalveillance.gouv.fr
-    </p>
-
-    <div class="stats-grid reveal reveal-delay-3">
-      <div class="stat-cell">
-        <div class="stat-big">10&nbsp;500<span>&nbsp;Mds$</span></div>
-        <div class="stat-label">Coût du cybercrime mondial en 2025</div>
-        <div class="stat-source">Cybersecurity Ventures</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-big"><span>500&nbsp;000</span>+</div>
-        <div class="stat-label">Demandes assistance Cybermv.gouv.fr 2025</div>
-        <div class="stat-source">+20% vs 2024</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-big"><span>+159</span>%</div>
-        <div class="stat-label">Fraude faux conseiller bancaire</div>
-        <div class="stat-source">Cybermalveillance.gouv.fr 2025</div>
-      </div>
-    </div>
+<section class="feature-strip reveal" aria-label="Fonctionnalités clés">
+  <div><span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 12l5-5"/><path d="M12 4v2M12 18v2M4 12h2M18 12h2"/></svg></span><strong>Analyse en temps réel</strong><p>Détection instantanée des menaces.</p></div>
+  <div><span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-2.8 8.2-7 10-4.2-1.8-7-5.5-7-10V6l7-3z"/><path d="m8.8 12.2 2.1 2.1 4.5-4.8"/></svg></span><strong>Score de confiance clair</strong><p>Évaluez le risque de chaque interaction.</p></div>
+  <div><span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10"/><path d="M7 9v5"/><path d="M17 8v6"/><path d="M4 12v2"/><path d="M20 11v3"/><path d="M12 19h.01"/></svg></span><strong>Alertes compréhensibles</strong><p>Des explications simples, des actions concrètes.</p></div>
+  <div><span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 14a7 7 0 0 1 14 0"/><path d="M8 14a4 4 0 0 1 8 0"/><path d="M12 14h.01"/><path d="M12 18v3"/></svg></span><strong>Signalements anonymisés</strong><p>Contribuez à protéger la communauté.</p></div>
+</section>
+<section class="signature-band reveal">
+  <p class="eyebrow">Signature DYLETH</p>
+  <h2>Un signal de confiance avant chaque action risquée.</h2>
+  <p>DYLETH matérialise la protection comme une vérification silencieuse : un scan lisible, une alerte claire, un choix laissé à l'utilisateur.</p>
+  <div class="module-rail" aria-label="Les 7 modules DYLETH">
+    <a href="/solution/7-modules/"><span class="module-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2.2 2A16.8 16.8 0 0 1 3 6.2 2 2 0 0 1 5 4z"/></svg></span><strong>Appels</strong><small>Numéros entrants</small></a>
+    <a href="/solution/7-modules/"><span class="module-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H9l-5 4v-4H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M8 11h.01M12 11h.01M16 11h.01"/></svg></span><strong>SMS</strong><small>Messages frauduleux</small></a>
+    <a href="/solution/7-modules/"><span class="module-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span><strong>Emails</strong><small>Expéditeurs suspects</small></a>
+    <a href="/solution/7-modules/"><span class="module-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1"/></svg></span><strong>URLs</strong><small>Liens en temps réel</small></a>
+    <a href="/solution/7-modules/"><span class="module-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10a12 12 0 0 1 16 0"/><path d="M7 13a7.5 7.5 0 0 1 10 0"/><path d="M10 16a3 3 0 0 1 4 0"/><path d="M12 20h.01"/></svg></span><strong>WiFi mobile</strong><small>Réseaux publics</small></a>
+    <a href="/solution/7-modules/"><span class="module-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11 12 4l8 7"/><path d="M6 10.5V20h12v-9.5"/><path d="M9 15a5 5 0 0 1 6 0"/><path d="M11 18h2"/></svg></span><strong>WiFi maison</strong><small>Réseau domestique</small></a>
+    <a href="/solution/7-modules/"><span class="module-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-2.8 8.2-7 10-4.2-1.8-7-5.5-7-10V6l7-3z"/><path d="M8.5 12a5 5 0 0 1 7 0"/><path d="M10.5 15a2 2 0 0 1 3 0"/></svg></span><strong>WiFi Pro</strong><small>Professionnels</small></a>
   </div>
 </section>
-
-<!-- SECTION 7 MODULES -->
-<section class="section bg-light">
-  <div class="section-inner">
-    <span class="ap-eyebrow reveal" style="color:var(--blue-cta);">LES 7 MODULES</span>
-    <h2 class="section-h2 section-h2-dark reveal reveal-delay-1">Une protection pour chaque vecteur d'attaque.</h2>
-    <p class="ap-sub-light reveal reveal-delay-2">Tous gratuits pour les particuliers. WiFi Pro à 29&euro; HT/an pour les professionnels.</p>
-
-    <div class="mod-grid">
-
-      <div class="mod-card reveal">
-        <div class="mod-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12.1 19.36 19.36 0 0 1 1.64 3.5 2 2 0 0 1 3.62 1.34h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        </div>
-        <div class="mod-num">01</div>
-        <div class="mod-name">Appels frauduleux</div>
-        <div class="mod-desc">Analyse du numéro avant décrochage. Score de confiance. Appels natifs et VoIP (WhatsApp, Signal, Telegram…).</div>
-        <span class="badge-green">Gratuit</span>
-      </div>
-
-      <div class="mod-card reveal reveal-delay-1">
-        <div class="mod-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        </div>
-        <div class="mod-num">02</div>
-        <div class="mod-name">SMS malveillants</div>
-        <div class="mod-desc">Analyse en quelques millisecondes avant ouverture. Détection smishing, liens raccourcis. Filtrage 100% local sur iOS.</div>
-        <span class="badge-green">Gratuit</span>
-      </div>
-
-      <div class="mod-card reveal reveal-delay-2">
-        <div class="mod-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        </div>
-        <div class="mod-num">03</div>
-        <div class="mod-name">Emails piégés</div>
-        <div class="mod-desc">Connexion Gmail lecture seule via OAuth. Analyse SPF/DKIM, domaines usurpés, liens suspects. Révocable à tout moment.</div>
-        <span class="badge-green">Gratuit</span>
-      </div>
-
-      <div class="mod-card reveal reveal-delay-3">
-        <div class="mod-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-        </div>
-        <div class="mod-num">04</div>
-        <div class="mod-name">URLs dangereuses</div>
-        <div class="mod-desc">Analyse automatique de chaque lien avant clic. Détection raccourcisseurs, typosquatting, domaines frauduleux.</div>
-        <span class="badge-green">Gratuit</span>
-      </div>
-
-      <div class="mod-card reveal">
-        <div class="mod-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
-        </div>
-        <div class="mod-num">05</div>
-        <div class="mod-name">WiFi Mobile</div>
-        <div class="mod-desc">DNS privé dns.dyleth.com. Filtrage sur tous réseaux (WiFi public, 4G, 5G). Requêtes chiffrées DoT.</div>
-        <span class="badge-green">Gratuit</span>
-      </div>
-
-      <div class="mod-card reveal reveal-delay-1">
-        <div class="mod-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <div class="mod-num">06</div>
-        <div class="mod-name">WiFi Maison</div>
-        <div class="mod-desc">Même architecture DNS pour le réseau domestique. Protège tous les appareils du foyer.</div>
-        <span class="badge-green">Gratuit</span>
-      </div>
-
-      <div class="mod-card reveal reveal-delay-2" style="grid-column: span 2;">
-        <div style="display:flex;gap:24px;align-items:flex-start;">
-          <div>
-            <div class="mod-icon" style="background:rgba(37,99,235,0.08);">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
-            </div>
-            <div class="mod-num">07</div>
-            <div class="mod-name">WiFi Pro</div>
-          </div>
-          <div style="flex:1;">
-            <p class="mod-desc" style="margin-top:0;">Tableau de bord dédié. Historique des menaces. Pour artisans, commerces, hôtels, entreprises. Protège l'intégralité du réseau professionnel.</p>
-            <span class="badge-blue">29&euro; HT/an/modem</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div style="margin-top:36px;" class="reveal">
-      <a href="modules.html" class="link-dark">Voir le détail de chaque module</a>
-    </div>
-  </div>
+<section class="split-feature"><div class="feature-copy reveal"><p class="eyebrow">Protection complète</p><h2>Chaque vecteur d'attaque. Couvert.</h2><p>Appels frauduleux, smishing, phishing email, URLs dangereuses, WiFi mobile, WiFi maison et WiFi Pro. DYLETH agit avant le clic, avant le décrochage, avant la connexion risquée.</p><a href="/solution/7-modules/">Voir les modules</a></div><div class="feature-panel reveal"><ul><li>Analyse en temps réel</li><li>Score de confiance clair</li><li>Alertes compréhensibles</li><li>Signalements anonymisés</li></ul></div></section>
+<section class="section light"><p class="eyebrow reveal">Privacy by Design</p><h2 class="reveal">Vos données ne sont pas le produit.</h2><p class="section-lead reveal">Traitement local en priorité, données minimisées, aucune publicité, aucune revente, conformité RGPD dès la conception.</p><div class="cards three"><article class="reveal"><h3>Local d'abord</h3><p>Lorsque c'est possible, l'analyse est effectuée directement sur l'appareil.</p></article><article class="reveal"><h3>Zéro revente</h3><p>DYLETH ne vend, ne loue et ne partage pas vos données à des fins commerciales.</p></article><article class="reveal"><h3>UE par défaut</h3><p>Infrastructure applicative pensée pour la France et l'Union européenne.</p></article></div></section>
+<section class="threat-section dark"><div class="threat-orbit" aria-hidden="true"><span></span><span></span></div><p class="eyebrow reveal">Une menace en hausse</p><h2 class="reveal">Les attaques évoluent.<br><em>DYLETH</em> vous protège.</h2><p class="section-lead reveal">Fraudes téléphoniques, usurpations d'identité, arnaques en ligne... Les cyber-criminels exploitent chaque canal. DYLETH ferme la porte.</p><div class="threat-cards"><article class="reveal"><span class="threat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2.2 2A16.8 16.8 0 0 1 3 6.2 2 2 0 0 1 5 4z"/></svg></span><strong>+159%</strong><p>fraude au faux conseiller bancaire</p></article><article class="reveal"><span class="threat-icon violet"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span><strong>500 000+</strong><p>demandes d'assistance Cybermalveillance.gouv.fr</p></article><article class="reveal"><span class="threat-icon blue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h2"/><path d="M8 8v8"/><path d="M12 5v14"/><path d="M16 8v8"/><path d="M20 12h-2"/></svg></span><strong>10 500 Mds$</strong><p>coût mondial estimé du cybercrime en 2025</p></article></div><div class="center"><a class="link" href="/menace/chiffres-cles/">Explorer les chiffres</a></div></section>
+<section class="story-flow reveal" aria-label="De la menace à la protection">
+  <article><span>Menace</span><h2>Le signal est brouillé.</h2><p>Faux conseillers, SMS piégés, URLs usurpées et deepfakes rendent la fraude plus difficile à lire.</p></article>
+  <article><span>Analyse</span><h2>DYLETH vérifie.</h2><p>Chaque vecteur est analysé selon son contexte, avec une priorité donnée au traitement local et à la minimisation.</p></article>
+  <article><span>Protection</span><h2>L'alerte devient claire.</h2><p>L'utilisateur reçoit un signal simple avant l'action risquée, sans jargon et sans collecte commerciale.</p></article>
 </section>
-
-<!-- SECTION COMPARATIF -->
-<section class="section bg-black">
-  <div class="section-inner">
-    <span class="ap-eyebrow reveal">POURQUOI DYLETH</span>
-    <h2 class="section-h2 reveal reveal-delay-1">Ce que les autres ne font pas.</h2>
-    <p class="ap-sub reveal reveal-delay-2">Aucune solution existante ne couvre l'ensemble des vecteurs d'attaque, gratuitement, sans collecte de données.</p>
-
-    <div class="table-wrap reveal reveal-delay-3">
-      <table class="comp-table">
-        <thead>
-          <tr>
-            <th>Solution</th>
-            <th>Couverture</th>
-            <th>Modèle</th>
-            <th>Problème</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Truecaller</strong></td>
-            <td>Appels uniquement</td>
-            <td>Freemium + pub</td>
-            <td>Collecte et monétise les contacts. 450M utilisateurs mais données commercialisées.</td>
-          </tr>
-          <tr>
-            <td><strong>Hiya</strong></td>
-            <td>Appels uniquement</td>
-            <td>Gratuit + Pro</td>
-            <td>Pas de protection SMS, email, URL ni WiFi.</td>
-          </tr>
-          <tr>
-            <td><strong>RoboKiller</strong></td>
-            <td>Appels uniquement</td>
-            <td>Payant 40$/an</td>
-            <td>Payant. Peu efficace hors USA.</td>
-          </tr>
-          <tr>
-            <td><strong>Norton / Kaspersky</strong></td>
-            <td>Antivirus partiel</td>
-            <td>30–100$/an</td>
-            <td>Lourd, payant, orienté entreprises.</td>
-          </tr>
-          <tr class="row-dyleth">
-            <td><strong>DYLETH</strong></td>
-            <td><strong>7 modules complets</strong></td>
-            <td><strong>Gratuit</strong></td>
-            <td><strong>Aucune collecte. Aucune pub. Privacy by Design. 14 langues.</strong></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+<section class="section"><p class="eyebrow reveal">Pour tous les usages</p><h2 class="reveal">Particuliers, familles, entreprises, collectivités.</h2><div class="sector-grid reveal"><a href="/secteurs/particuliers/">Particuliers</a><a href="/secteurs/tpe-pme/">TPE-PME</a><a href="/secteurs/administrations/">Administrations</a><a href="/secteurs/sante/">Santé</a><a href="/secteurs/banques-assurances/">Banques & assurances</a><a href="/secteurs/enseignement/">Enseignement</a></div></section><section class="cta-band reveal" id="telecharger">
+  <p class="eyebrow">Disponible début juin 2026</p>
+  <h2>Une protection claire, gratuite et prête pour le quotidien.</h2>
+  <p>DYLETH protège appels, SMS, emails, URLs et réseaux WiFi, avec une approche Privacy by Design et une infrastructure pensée pour l'Europe.</p>
+  <div class="store-actions cta-store-actions" aria-label="Téléchargement de l'application"><a class="store-badge apple" href="#" aria-label="App Store"><span>App Store</span></a><a class="store-badge play" href="#" aria-label="Google Play"><span>Google Play</span></a></div>
 </section>
-
-<!-- CITATION -->
-<section class="quote-section reveal">
-  <div class="quote-inner">
-    <span class="quote-marks">&ldquo;</span>
-    <blockquote class="quote-text">
-      La confiance numérique ne devrait pas être un privilège réservé à ceux qui ont les moyens de se payer un service premium ou les compétences techniques pour l'utiliser. Elle devrait être un droit. C'est ce que nous construisons.
-    </blockquote>
-    <p class="quote-attr">— DYLETH SAS, Livre Blanc 2026</p>
-  </div>
-</section>
-
-<!-- SECTION SECTEURS -->
-<section class="section bg-light">
-  <div class="section-inner">
-    <span class="ap-eyebrow reveal" style="color:var(--blue-cta);">À QUI S'ADRESSE DYLETH</span>
-    <h2 class="section-h2 section-h2-dark reveal reveal-delay-1">Une protection pour tous.</h2>
-
-    <div class="cards-grid" style="margin-top:48px;">
-      <div class="card reveal">
-        <div class="card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        </div>
-        <div class="card-title">Seniors</div>
-        <p class="card-body">Les personnes âgées sont les cibles privilégiées des arnaques téléphoniques. DYLETH les protège silencieusement, en arrière-plan, sans jamais leur demander la moindre action technique.</p>
-      </div>
-      <div class="card reveal reveal-delay-1">
-        <div class="card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <div class="card-title">Familles</div>
-        <p class="card-body">La protection WiFi domestique bénéficie à l'ensemble des appareils du foyer. Installez DYLETH sur le téléphone de vos proches pour les protéger à distance.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-        </div>
-        <div class="card-title">Professionnels</div>
-        <p class="card-body">Protection contre les attaques de phishing sophistiquées et les compromissions de messagerie professionnelle. Le module WiFi Pro sécurise le réseau de l'établissement.</p>
-      </div>
-      <div class="card reveal reveal-delay-1">
-        <div class="card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <div class="card-title">Collectivités</div>
-        <p class="card-body">Les mairies, hôpitaux, établissements scolaires et administrations bénéficient d'un accès entièrement gratuit, sans compétence technique requise.</p>
-      </div>
-    </div>
-
-    <div style="margin-top:36px;" class="reveal">
-      <a href="secteurs.html" class="link-dark">Voir tous les secteurs</a>
-    </div>
-  </div>
-</section>
-
-<!-- CTA FINAL -->
-<section class="section bg-black" style="text-align:center;">
-  <div class="section-inner">
-    <span class="badge-pill reveal" style="margin-bottom:24px;">
-      <span class="dot"></span> Lancement début juin 2026
-    </span>
-    <h2 class="section-h2 reveal reveal-delay-1" style="margin-top:16px;">Téléchargez DYLETH.</h2>
-    <p class="ap-sub reveal reveal-delay-2">Gratuit. Sans engagement. Disponible sur App Store et Google Play.</p>
-    <div class="hero-actions reveal reveal-delay-3">
-      <a href="#" class="btn-primary">Télécharger gratuitement</a>
-      <a href="#" class="link-blue">App Store</a>
-      <a href="#" class="link-blue">Google Play</a>
-    </div>
-    <p class="cta-note reveal reveal-delay-4">iOS 15+ &middot; Android 10+ &middot; 14 langues</p>
-  </div>
-</section>
-
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <span class="trust-item">RGPD natif</span>
-  <span class="trust-item">Privacy by Design</span>
-  <span class="trust-item">Développé en France</span>
-  <span class="trust-item">Infrastructure 100% UE</span>
-  <span class="trust-item">Dépôts INPI</span>
-  <span class="trust-item">Zéro publicité</span>
-  <span class="trust-item">Zéro revente de données</span>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer">
-    <div class="footer-col">
-      <div class="footer-col-title">Produit</div>
-      <a href="modules.html">Les 7 modules</a>
-      <a href="solution.html">Comment ça marche</a>
-      <a href="solution.html">Privacy by Design</a>
-      <a href="ressources.html">Ressources</a>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Secteurs</div>
-      <a href="secteurs.html">Seniors</a>
-      <a href="secteurs.html">Familles</a>
-      <a href="secteurs.html">Professionnels</a>
-      <a href="secteurs.html">Collectivités</a>
-      <a href="secteurs.html">Voyageurs</a>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Légal</div>
-      <a href="mentions-legales.html">Mentions légales</a>
-      <a href="privacy.html">Politique de confidentialité</a>
-      <a href="cgu.html">CGU</a>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Contact</div>
-      <a href="mailto:contact@dyleth.com">contact@dyleth.com</a>
-      <a href="mailto:dpo@dyleth.com">dpo@dyleth.com</a>
-      <p>78C rue de Fontanières</p>
-      <p>69100 Villeurbanne, France</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>Copyright &copy; 2026 DYLETH SAS &mdash; SIREN 103 432 555 &mdash; Villeurbanne, France</p>
-    <div class="footer-bottom-links">
-      <a href="mentions-legales.html">Mentions légales</a>
-      <a href="privacy.html">Confidentialité</a>
-      <a href="cgu.html">CGU</a>
-    </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="/logo.svg" alt="" width="34" height="34"><strong>DYLETH</strong><p>Bouclier numérique personnel. Développé en France, pensé pour protéger sans collecter.</p></div>
+    <div class="footer-links"><div><h2>Produit</h2><a href="/solution/7-modules/">Les 7 modules</a><a href="/solution/technologie/">Technologie</a><a href="/solution/privacy-by-design/">Privacy by Design</a><a href="/solution/rgpd/">RGPD</a><a href="/solution/faq/">FAQ</a></div><div><h2>Menace</h2><a href="/menace/etat-des-lieux/">Etat des lieux</a><a href="/menace/chiffres-cles/">Chiffres clés</a><a href="/menace/types-de-fraudes/">Types de fraudes</a><a href="/menace/intelligence-artificielle/">IA et fraude</a></div><div><h2>Ressources</h2><a href="/ressources/blog/">Blog</a><a href="/comprendre/glossaire/">Glossaire</a><a href="/ressources/livre-blanc/">Livre blanc</a><a href="/ressources/newsletter/">Newsletter</a></div><div><h2>Légal</h2><a href="/legal/mentions-legales/">Mentions légales</a><a href="/legal/confidentialite/">Confidentialité</a><a href="/legal/cgu/">CGU</a><a href="/legal/cgv/">CGV Pro</a><a href="/legal/cookies/">Cookies</a></div></div>
+    <div class="footer-bottom"><span>© 2026 DYLETH SAS</span><span><a href="mailto:contact@dyleth.com">contact@dyleth.com</a> · <a href="mailto:dpo@dyleth.com">dpo@dyleth.com</a></span></div>
   </div>
 </footer>
-
-<script src="js/main.js"></script>
+<script src="/js/main.js" defer></script>
 </body>
 </html>
