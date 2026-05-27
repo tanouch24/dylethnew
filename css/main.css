@@ -4509,11 +4509,6 @@ body {
   object-fit: contain;
 }
 
-.d2-feature-strip .d2-icon:not([src$="dyleth-sms.svg"]),
-.d2-module-grid .d2-icon:not([src$="dyleth-sms.svg"]) {
-  filter: invert(1);
-}
-
 .d2-feature-strip .d2-icon {
   margin-bottom: 28px;
 }
@@ -4710,6 +4705,7 @@ body {
   width: 34px;
   height: 34px;
   margin-bottom: 34px;
+  filter: invert(1);
 }
 
 .d2-card-grid h3 {
