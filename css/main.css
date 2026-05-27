@@ -4074,6 +4074,96 @@ body {
   gap: clamp(42px, 6vw, 86px);
 }
 
+.d2-hero-ambient {
+  position: absolute;
+  inset: 0 -10vw;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  contain: layout paint;
+}
+
+.d2-hero-ambient span {
+  position: absolute;
+  display: block;
+}
+
+.d2-ambient-grid {
+  inset: 8% 0 6%;
+  opacity: 0.13;
+  background:
+    linear-gradient(rgba(245, 245, 247, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 245, 247, 0.055) 1px, transparent 1px);
+  background-size: 78px 78px;
+  mask-image: radial-gradient(ellipse at 70% 46%, black 0 28%, transparent 70%);
+  animation: d2GridDrift 42s linear infinite;
+}
+
+.d2-ambient-orbit {
+  right: clamp(0px, 6vw, 90px);
+  top: 12%;
+  width: min(720px, 55vw);
+  aspect-ratio: 1;
+  border: 1px solid rgba(41, 151, 255, 0.14);
+  border-radius: 50%;
+  opacity: 0.78;
+  transform-origin: 50% 50%;
+  animation: d2OrbitBreathe 28s ease-in-out infinite;
+}
+
+.d2-ambient-orbit::before,
+.d2-ambient-orbit::after {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border: 1px solid rgba(245, 245, 247, 0.055);
+  border-radius: 48% 52% 50% 50%;
+  transform: rotate(18deg);
+}
+
+.d2-ambient-orbit::after {
+  inset: 26%;
+  border-color: rgba(48, 209, 88, 0.07);
+  transform: rotate(-28deg);
+}
+
+.d2-ambient-line {
+  right: -2vw;
+  top: 54%;
+  width: min(760px, 60vw);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(41, 151, 255, 0.24), rgba(48, 209, 88, 0.16), transparent);
+  opacity: 0.55;
+  animation: d2SignalLine 18s ease-in-out infinite;
+}
+
+.d2-ambient-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(245, 245, 247, 0.72);
+  opacity: 0;
+  box-shadow: 0 0 0 3px rgba(41, 151, 255, 0.055);
+  animation: d2RarePulse 16s ease-in-out infinite;
+}
+
+.d2-ambient-dot-a {
+  right: 28%;
+  top: 34%;
+}
+
+.d2-ambient-dot-b {
+  right: 13%;
+  top: 59%;
+  animation-delay: -6s;
+}
+
+.d2-ambient-dot-c {
+  right: 45%;
+  top: 69%;
+  animation-delay: -11s;
+}
+
 .d2-hero::before {
   content: "";
   position: absolute;
@@ -4094,6 +4184,27 @@ body {
   bottom: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(245, 245, 247, 0.13), transparent);
+}
+
+@keyframes d2GridDrift {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 78px 78px, 78px 78px; }
+}
+
+@keyframes d2OrbitBreathe {
+  0%, 100% { transform: rotate(0deg) scale(1); opacity: 0.56; }
+  50% { transform: rotate(8deg) scale(1.025); opacity: 0.8; }
+}
+
+@keyframes d2SignalLine {
+  0%, 100% { transform: translateX(-18px); opacity: 0.28; }
+  50% { transform: translateX(18px); opacity: 0.56; }
+}
+
+@keyframes d2RarePulse {
+  0%, 64%, 100% { transform: scale(0.7); opacity: 0; }
+  72% { opacity: 0.72; }
+  82% { transform: scale(1.2); opacity: 0.22; }
 }
 
 .d2-hero-copy {
@@ -4747,6 +4858,36 @@ body {
     opacity: 0.6;
   }
 
+  .d2-hero-ambient {
+    inset: 24% -20vw 0;
+    opacity: 0.28;
+  }
+
+  .d2-ambient-grid {
+    display: none;
+  }
+
+  .d2-ambient-orbit {
+    right: 50%;
+    top: 28%;
+    width: min(560px, 92vw);
+    transform: translateX(50%);
+    animation-duration: 44s;
+  }
+
+  .d2-ambient-line {
+    right: 50%;
+    top: 58%;
+    width: min(480px, 84vw);
+    transform: translateX(50%);
+    animation-duration: 32s;
+  }
+
+  .d2-ambient-dot-b,
+  .d2-ambient-dot-c {
+    display: none;
+  }
+
   .d2-eyebrow,
   .d2-trust-list,
   .d2-store-row {
@@ -4820,6 +4961,16 @@ body {
   .d2-hero {
     padding: 52px 0 58px;
     gap: 34px;
+  }
+
+  .d2-hero-ambient {
+    opacity: 0.2;
+  }
+
+  .d2-ambient-orbit,
+  .d2-ambient-line,
+  .d2-ambient-dot {
+    animation: none;
   }
 
   .d2-eyebrow {
@@ -4944,5 +5095,18 @@ body {
   .d2-cta {
     margin-bottom: 64px;
     padding: 46px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .d2-ambient-grid,
+  .d2-ambient-orbit,
+  .d2-ambient-line,
+  .d2-ambient-dot {
+    animation: none;
+  }
+
+  .d2-ambient-dot {
+    opacity: 0.18;
   }
 }
