@@ -4504,8 +4504,8 @@ body {
 
 .d2-icon {
   display: block;
-  width: 34px;
-  height: 34px;
+  width: 38px;
+  height: 38px;
   object-fit: contain;
 }
 
@@ -4602,7 +4602,9 @@ body {
 }
 
 .d2-module-grid .d2-icon {
-  margin-bottom: 28px;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 30px;
 }
 
 .d2-module-grid span {
@@ -4700,6 +4702,8 @@ body {
 }
 
 .d2-card-grid .d2-icon {
+  width: 36px;
+  height: 36px;
   margin-bottom: 34px;
   filter: brightness(0) saturate(100%) invert(10%) sepia(7%) saturate(524%) hue-rotate(202deg) brightness(92%) contrast(92%);
 }
