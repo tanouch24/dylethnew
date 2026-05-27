@@ -1,22 +1,23 @@
 :root {
-  --bg: #020307;
-  --bg-soft: #080a10;
-  --ink: #f7f8fb;
-  --ink-soft: rgba(247, 248, 251, 0.72);
-  --ink-faint: rgba(247, 248, 251, 0.48);
-  --paper: #f5f6f8;
-  --paper-ink: #111318;
-  --paper-soft: rgba(17, 19, 24, 0.6);
-  --line: rgba(255, 255, 255, 0.1);
-  --line-strong: rgba(255, 255, 255, 0.18);
-  --line-dark: rgba(2, 3, 7, 0.1);
+  --bg: #04060e;
+  --bg-soft: #080c18;
+  --ink: #f2f2f7;
+  --ink-soft: rgba(242, 242, 247, 0.68);
+  --ink-faint: rgba(242, 242, 247, 0.38);
+  --paper: #f6f7fb;
+  --paper-ink: #10131b;
+  --paper-soft: rgba(16, 19, 27, 0.62);
+  --line: rgba(242, 242, 247, 0.1);
+  --line-strong: rgba(10, 132, 255, 0.24);
+  --line-dark: rgba(4, 6, 14, 0.1);
   --blue: #0a84ff;
-  --blue-deep: #0066d6;
+  --blue-deep: #0a60c4;
   --cyan: #5ac8fa;
-  --green: #34c759;
+  --green: #30d158;
   --red: #ff6961;
-  --glass: rgba(255, 255, 255, 0.055);
-  --glass-2: rgba(255, 255, 255, 0.03);
+  --gold: #ffd60a;
+  --glass: rgba(242, 242, 247, 0.07);
+  --glass-2: rgba(242, 242, 247, 0.028);
   --shadow: 0 34px 90px rgba(0, 0, 0, 0.46);
   --radius: 10px;
   --max: 1120px;
@@ -34,8 +35,9 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, sans-serif;
   background:
-    radial-gradient(circle at 80% -10%, rgba(10, 132, 255, 0.16), transparent 34rem),
-    radial-gradient(circle at 12% 12%, rgba(90, 200, 250, 0.08), transparent 28rem),
+    radial-gradient(circle at 18% -10%, rgba(10, 132, 255, 0.14), transparent 34rem),
+    radial-gradient(circle at 88% 4%, rgba(48, 209, 88, 0.07), transparent 30rem),
+    linear-gradient(180deg, #04060e 0%, #080c18 52%, #04060e 100%),
     var(--bg);
   color: var(--ink);
   font-size: 17px;
@@ -3615,4 +3617,382 @@ h3 {
 
   /* Last module-rail item spans both columns */
   .module-rail a:last-child { grid-column: 1 / -1; max-width: 240px; margin: 0 auto; }
+}
+
+/* Final DYLETH design alignment: reference palette, hero balance, store badges */
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+body {
+  background:
+    radial-gradient(circle at 18% -8%, rgba(10, 132, 255, 0.14), transparent 34rem),
+    radial-gradient(circle at 82% 0, rgba(48, 209, 88, 0.06), transparent 30rem),
+    linear-gradient(180deg, #04060e 0%, #080c18 48%, #04060e 100%);
+}
+
+.site-header {
+  height: 64px;
+  background: rgba(4, 6, 14, 0.88);
+  border-bottom-color: rgba(242, 242, 247, 0.1);
+}
+
+.brand {
+  letter-spacing: 0.18em;
+}
+
+.desktop-nav a {
+  color: rgba(242, 242, 247, 0.58);
+}
+
+.desktop-nav a:hover,
+.desktop-nav a[aria-current="page"] {
+  color: #f2f2f7;
+  background: rgba(242, 242, 247, 0.07);
+}
+
+.home-hero {
+  width: min(1240px, calc(100% - 48px));
+  grid-template-columns: minmax(0, 0.92fr) minmax(380px, 0.78fr);
+  gap: clamp(58px, 7vw, 110px);
+  min-height: calc(100svh - 64px);
+  padding-top: clamp(88px, 9vh, 128px);
+  padding-bottom: clamp(78px, 9vh, 116px);
+}
+
+.home-hero::before {
+  inset: 20px -7vw 0;
+  background:
+    radial-gradient(ellipse at 74% 44%, rgba(10, 132, 255, 0.18), transparent 27rem),
+    radial-gradient(ellipse at 80% 60%, rgba(48, 209, 88, 0.055), transparent 25rem),
+    conic-gradient(from 220deg at 74% 47%, transparent 0 25%, rgba(90, 200, 250, 0.12), transparent 43% 100%);
+  mask-image: radial-gradient(ellipse at 72% 48%, black 0, transparent 70%);
+}
+
+.home-hero::after {
+  right: clamp(270px, 28vw, 470px);
+  top: 20%;
+  width: clamp(380px, 38vw, 650px);
+  border-color: rgba(90, 200, 250, 0.12);
+  opacity: 0.74;
+}
+
+.hero-wave::before {
+  left: 34%;
+  top: 10%;
+  height: 74%;
+  opacity: 0.5;
+}
+
+.hero-wave::after {
+  left: 35%;
+  top: 53%;
+  opacity: 0.3;
+}
+
+.home .launch-badge,
+.launch-badge {
+  color: #60b3ff;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  letter-spacing: 0.14em;
+}
+
+.home .hero-copy h1 {
+  max-width: 640px;
+  font-size: clamp(58px, 6.7vw, 108px);
+  line-height: 1.03;
+  font-weight: 820;
+  letter-spacing: 0;
+  color: #fff;
+  text-shadow: 0 24px 90px rgba(10, 132, 255, 0.16);
+}
+
+.home .lead {
+  max-width: 610px;
+  font-size: clamp(20px, 1.8vw, 26px);
+  line-height: 1.7;
+  color: rgba(242, 242, 247, 0.64);
+}
+
+.device-stage {
+  align-self: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.signal-field {
+  width: min(720px, 55vw);
+  opacity: 0.5;
+}
+
+.phone {
+  width: clamp(330px, 24vw, 430px);
+  max-height: none;
+  padding: 16px;
+  border-radius: 46px;
+  background: linear-gradient(160deg, #2b303a, #05070c 58%), #080c18;
+  transform: perspective(1200px) rotateY(-2.5deg) rotateX(1deg);
+  opacity: 1;
+  box-shadow: 0 38px 90px rgba(0, 0, 0, 0.54), inset 0 0 0 1px rgba(242, 242, 247, 0.08);
+}
+
+.phone-top {
+  width: 112px;
+  height: 26px;
+  margin-bottom: 12px;
+}
+
+.phone-screen {
+  height: calc(100% - 38px);
+  padding: clamp(28px, 2.2vw, 36px) clamp(20px, 1.8vw, 26px);
+  background:
+    radial-gradient(circle at 32% 0, rgba(90, 200, 250, 0.18), transparent 33%),
+    linear-gradient(rgba(242, 242, 247, 0.04) 1px, transparent 1px),
+    #080c18;
+  background-size: auto, 100% 54px, auto;
+}
+
+.phone-brand {
+  margin-bottom: clamp(20px, 2vw, 30px);
+}
+
+.score-ring {
+  width: clamp(134px, 10vw, 164px);
+  margin-bottom: clamp(22px, 2vw, 30px);
+  background: conic-gradient(from 210deg, #2567ff 0 42%, #6ee59d 42% 78%, rgba(242, 242, 247, 0.08) 78% 100%);
+}
+
+.phone-screen h2 {
+  font-size: clamp(20px, 1.7vw, 25px);
+}
+
+.score {
+  color: #5b9cff;
+  font-size: clamp(40px, 3.2vw, 52px);
+}
+
+.scan-panel {
+  border-radius: 16px;
+  background: rgba(242, 242, 247, 0.045);
+}
+
+.scan-panel .scan-row {
+  padding: clamp(10px, 1vw, 13px) 0;
+  font-size: clamp(13px, 1vw, 15px);
+}
+
+.store-actions {
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.store-badge {
+  flex: 0 0 auto;
+  width: 164px;
+  min-width: 164px;
+  max-width: none;
+  min-height: 54px;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 7px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(242, 242, 247, 0.42);
+  background: #05070c;
+  box-shadow: inset 0 1px 0 rgba(242, 242, 247, 0.08), 0 16px 38px rgba(0, 0, 0, 0.28);
+}
+
+.store-badge:hover {
+  border-color: rgba(242, 242, 247, 0.68);
+  box-shadow: 0 18px 42px rgba(10, 132, 255, 0.16), inset 0 1px 0 rgba(242, 242, 247, 0.1);
+}
+
+.badge-logo {
+  width: 28px;
+  height: 28px;
+}
+
+.badge-text small {
+  display: block;
+  font-size: 9px;
+  line-height: 1.05;
+  color: rgba(242, 242, 247, 0.72);
+}
+
+.badge-text strong {
+  display: block;
+  white-space: nowrap;
+  font-size: 17px;
+  line-height: 1.12;
+  color: #fff;
+}
+
+.store-badge-soon {
+  cursor: pointer;
+}
+
+.feature-strip {
+  width: min(1120px, calc(100% - 48px));
+  margin-top: -16px;
+}
+
+.feature-copy,
+.feature-panel,
+.hub-card,
+.article-card,
+.related,
+.cards article,
+.signature-band,
+.cta-band {
+  background: linear-gradient(180deg, rgba(242, 242, 247, 0.07), rgba(242, 242, 247, 0.026)), rgba(4, 6, 14, 0.28);
+}
+
+.section.light {
+  background:
+    radial-gradient(circle at 80% 0, rgba(10, 132, 255, 0.08), transparent 30rem),
+    #f6f7fb;
+}
+
+@media (max-width: 1120px) {
+  .home-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(330px, 0.72fr);
+    gap: 48px;
+  }
+
+  .home .hero-copy h1 {
+    font-size: clamp(52px, 7vw, 82px);
+  }
+
+  .phone {
+    width: clamp(300px, 31vw, 360px);
+  }
+}
+
+@media (max-width: 980px) {
+  .home-hero {
+    width: min(720px, calc(100% - 40px));
+    grid-template-columns: 1fr;
+    min-height: auto;
+    gap: 46px;
+    padding-top: 72px;
+    padding-bottom: 70px;
+    text-align: center;
+  }
+
+  .home .launch-badge {
+    justify-content: center;
+  }
+
+  .home .hero-copy h1 {
+    max-width: 680px;
+    font-size: clamp(48px, 9vw, 72px);
+  }
+
+  .home .lead {
+    max-width: 640px;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .store-actions {
+    justify-content: center;
+  }
+
+  .device-stage {
+    min-height: 480px;
+  }
+
+  .signal-field {
+    width: min(620px, 88vw);
+  }
+
+  .phone {
+    width: clamp(292px, 46vw, 350px);
+    transform: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-header {
+    height: 58px;
+  }
+
+  .home-hero {
+    width: calc(100% - 32px);
+    gap: 30px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .home .launch-badge {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    line-height: 1.4;
+  }
+
+  .home .launch-badge::before {
+    width: 22px;
+  }
+
+  .home .hero-copy h1 {
+    font-size: clamp(39px, 12vw, 54px);
+    line-height: 1.08;
+    margin-bottom: 18px;
+  }
+
+  .home .lead {
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  .store-actions {
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .store-badge {
+    width: min(100%, 260px);
+    min-width: 0;
+    max-width: 260px;
+    min-height: 52px;
+  }
+
+  .device-stage {
+    min-height: 390px;
+  }
+
+  .phone {
+    width: min(285px, 78vw);
+    max-height: none;
+    border-radius: 38px;
+  }
+
+  .phone-top {
+    width: 86px;
+    height: 22px;
+  }
+
+  .phone-screen {
+    padding: 23px 17px;
+  }
+
+  .score-ring {
+    width: 112px;
+  }
+
+  .score {
+    font-size: 36px;
+  }
+
+  .scan-panel .scan-row {
+    padding: 8px 0;
+    font-size: 12px;
+  }
+
+  .feature-strip {
+    margin-top: 0;
+  }
 }
