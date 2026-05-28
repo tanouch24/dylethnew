@@ -13,8 +13,8 @@
   <meta property="og:locale" content="fr_FR">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/favicon.svg">
-  <link rel="preload" href="/css/main.css?v=20260528-1" as="style">
-  <link rel="stylesheet" href="/css/main.css?v=20260528-1">
+  <link rel="preload" href="/css/main.css?v=20260528-2" as="style">
+  <link rel="stylesheet" href="/css/main.css?v=20260528-2">
 </head>
 <body class="article-page">
 <header class="site-header">
@@ -34,20 +34,59 @@
   </div>
 </section>
 <section class="article-shell">
-  <article class="article-card"><section class="article-section reveal"><p>Comprendre · Phishing</p></section><section class="article-section reveal"><h2>Définition simple</h2><p>Le phishing (hameçonnage) est une tentative de vol d&#x27;identifiants ou de données bancaires par email. L&#x27;escroc se fait passer pour une source de confiance (banque, Amazon, PayPal, impôts) pour vous pousser à agir.</p></section><section class="article-section reveal"><h2>Comment ça marche — Les 4 étapes</h2><p>1. L&#x27;email arriveIl ressemble parfaitement à un email de votre banque, avec logo, couleurs, signature.</p><p>2. L&#x27;urgence est créée&quot;Votre compte sera suspendu dans 24h&quot;, &quot;Tentative de connexion suspecte détectée&quot;.</p><p>3. Vous cliquez sur le lienVous arrivez sur un site identique à votre banque. HTTPS, logo, design : tout est copié.</p><p>4. Vous entrez vos donnéesLogin, mot de passe, code SMS. L&#x27;escroc les capture en temps réel.</p><p>Le directeur financier d&#x27;une PME reçoit un email de son PDG, en déplacement à Dubaï, lui demandant un virement confidentiel urgent de 380 000 €. L&#x27;email, le ton, la signature, l&#x27;adresse… tout est parfait. C&#x27;est de l&#x27;IA.</p></section><section class="article-section reveal"><h2>7 signes d&#x27;alerte</h2><p>Adresse email suspecteexemple@votre-banque-secure.com au lieu de @credit-agricole.fr</p><p>Urgence excessive&quot;Vous avez 2 heures&quot;, &quot;Votre compte sera supprimé&quot;</p><p>Demande de données sensiblesAucune institution légitime ne demande votre mot de passe par email</p><p>Lien qui ne correspond pasSurvolez le lien → l&#x27;URL réelle apparaît en bas du navigateur</p><p>Formule générique&quot;Cher client&quot; au lieu de votre vrai prénom</p><p>Fautes ou formulations bizarresMême légères — les LLMs améliorent mais pas parfaitement</p><p>Pièce jointe inattendueSurtout .exe, .zip, .docx avec macros</p></section><section class="article-section reveal"><h2>Comment se protéger</h2><p>Cliquez sur l&#x27;adresse email pour voir le vrai domaine. Un caractère différent = arnaque.</p><p>Ne cliquez jamais sur les liens d&#x27;email. Tapez l&#x27;adresse vous-même dans le navigateur.</p><p>L&#x27;authentification à 2 facteurs bloque l&#x27;accès même si vos identifiants sont volés.</p><p>Analyse chaque email entrant en temps réel. Phishing IA détecté en &lt;50ms.</p></section><section class="article-section reveal"><h2>Ne laissez plus un seul phishing passer.</h2><p>DYLETH analyse vos emails en temps réel et bloque les tentatives de phishing avant que vous ne les lisiez.</p></section></article>
+  <article class="article-card">
+    <section class="article-section article-intro reveal">
+      <p>Comprendre · Phishing</p>
+      <div class="article-callout"><strong>À retenir</strong><span>Le phishing ne cherche pas seulement à voler un mot de passe. Il cherche à vous faire agir trop vite, dans un contexte qui semble crédible.</span></div>
+    </section>
+    <section class="article-section reveal">
+      <h2>Définition simple</h2>
+      <p>Le phishing, ou hameçonnage, est une tentative de vol d'identifiants, de données bancaires ou d'accès professionnel par email. L'escroc se fait passer pour une source de confiance : banque, plateforme de livraison, impôts, fournisseur ou dirigeant.</p>
+      <p>La fraude fonctionne parce qu'elle imite un contexte connu et pousse à une action rapide : cliquer, renseigner un code, télécharger une pièce jointe ou valider un paiement.</p>
+    </section>
+    <section class="article-section reveal">
+      <h2>Comment ça marche</h2>
+      <ol class="article-steps">
+        <li><strong>L'email arrive.</strong><span>Il reprend le logo, le ton, les couleurs et parfois la signature d'un service connu.</span></li>
+        <li><strong>L'urgence est créée.</strong><span>"Votre compte sera suspendu", "tentative de connexion détectée", "paiement à régulariser".</span></li>
+        <li><strong>Le lien paraît légitime.</strong><span>La page imite un vrai service, avec HTTPS, design rassurant et formulaire familier.</span></li>
+        <li><strong>Les données sont capturées.</strong><span>Identifiant, mot de passe, code SMS ou information bancaire sont récupérés en temps réel.</span></li>
+      </ol>
+      <div class="article-example"><strong>Exemple concret</strong><p>Un responsable financier reçoit une demande urgente de virement depuis une adresse très proche du domaine de son entreprise. Le ton est crédible, le contexte semble logique, mais le domaine et l'urgence ne correspondent pas aux habitudes internes.</p></div>
+    </section>
+    <section class="article-section reveal">
+      <h2>Signaux d'alerte</h2>
+      <ul class="signal-list">
+        <li><strong>Adresse proche mais incorrecte</strong><span>Un domaine ressemblant remplace le domaine officiel.</span></li>
+        <li><strong>Urgence excessive</strong><span>Le message impose un délai court pour réduire votre vigilance.</span></li>
+        <li><strong>Demande sensible</strong><span>Mot de passe, code SMS, RIB ou validation inhabituelle.</span></li>
+        <li><strong>Lien incohérent</strong><span>L'URL réelle ne correspond pas au service annoncé.</span></li>
+        <li><strong>Pièce jointe inattendue</strong><span>Document compressé, fichier exécutable ou macro demandée.</span></li>
+      </ul>
+    </section>
+    <section class="article-section reveal">
+      <h2>Comment se protéger</h2>
+      <p>Vérifiez le domaine de l'expéditeur, ouvrez le service concerné depuis votre navigateur plutôt que depuis le lien reçu, et méfiez-vous des messages qui vous pressent d'agir immédiatement.</p>
+      <p>DYLETH ajoute une couche de vérification avant interaction : l'email est évalué, les signaux de risque sont expliqués, et l'utilisateur garde une décision lisible.</p>
+    </section>
+    <section class="article-section reveal">
+      <h2>Ne laissez pas le doute décider.</h2>
+      <p>DYLETH transforme un email suspect en signal compréhensible : score de confiance, raison de l'alerte et action recommandée.</p>
+    </section>
+  </article>
   <aside class="related"><h2>À lire aussi</h2><a href="/comprendre/smishing/">Smishing<span>›</span></a><a href="/comprendre/glossaire/">Glossaire<span>›</span></a></aside>
 </section>
 <section class="cta-band reveal" id="telecharger">
   <p class="eyebrow">Disponible début juin 2026</p>
-  <h2>Une protection claire, gratuite et prête pour le quotidien.</h2>
-  <p>DYLETH protège appels, SMS, emails, URLs et réseaux WiFi, avec une approche Privacy by Design et une infrastructure pensée pour l'Europe.</p>
+  <h2>Le phishing devient lisible avant le clic.</h2>
+  <p>DYLETH analyse les signaux suspects et vous aide à décider avant d'ouvrir un lien, une pièce jointe ou une demande sensible.</p>
   <div class="cta-actions"><a class="btn primary" href="/#telecharger">Télécharger gratuitement</a><a class="btn secondary" href="/solution/7-modules/">Découvrir les modules</a></div>
 </section>
 </main>
 <footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-brand"><img src="/logo.svg" alt="" width="34" height="34"><strong>DYLETH</strong><p>Bouclier numérique personnel. Développé en France, pensé pour protéger sans collecter.</p></div>
-    <div class="footer-links"><div><h2>Produit</h2><a href="/solution/7-modules/">Les 7 modules</a><a href="/solution/technologie/">Technologie</a><a href="/solution/privacy-by-design/">Privacy by Design</a><a href="/solution/rgpd/">RGPD</a><a href="/solution/faq/">FAQ</a></div><div><h2>Menace</h2><a href="/menace/etat-des-lieux/">Etat des lieux</a><a href="/menace/chiffres-cles/">Chiffres clés</a><a href="/menace/types-de-fraudes/">Types de fraudes</a><a href="/menace/intelligence-artificielle/">IA et fraude</a></div><div><h2>Ressources</h2><a href="/ressources/blog/">Blog</a><a href="/comprendre/glossaire/">Glossaire</a><a href="/ressources/livre-blanc/">Livre blanc</a><a href="/ressources/newsletter/">Newsletter</a></div><div><h2>Légal</h2><a href="/legal/mentions-legales/">Mentions légales</a><a href="/legal/confidentialite/">Confidentialité</a><a href="/legal/cgu/">CGU</a><a href="/legal/cgv/">CGV Pro</a><a href="/legal/cookies/">Cookies</a></div></div>
+    <div class="footer-brand"><img src="/logo.svg" alt="" width="34" height="34"><strong>DYLETH</strong><p>Vérification silencieuse des appels, messages, liens et réseaux. Développé en France, conçu pour protéger sans collecter.</p></div>
+    <div class="footer-links"><div><h2>Produit</h2><a href="/solution/7-modules/">Modules de protection</a><a href="/solution/technologie/">Moteur de détection</a><a href="/solution/privacy-by-design/">Privacy by Design</a><a href="/solution/rgpd/">Conformité RGPD</a></div><div><h2>Comprendre</h2><a href="/menace/">La menace</a><a href="/menace/types-de-fraudes/">Types de fraudes</a><a href="/comprendre/phishing/">Phishing</a><a href="/comprendre/smishing/">Smishing</a></div><div><h2>Usages</h2><a href="/secteurs/particuliers/">Particuliers</a><a href="/secteurs/tpe-pme/">TPE-PME</a><a href="/secteurs/administrations/">Administrations</a><a href="/secteurs/sante/">Santé</a></div><div><h2>Société</h2><a href="/a-propos/mission/">Mission</a><a href="/ressources/blog/">Ressources</a><a href="/legal/confidentialite/">Confidentialité</a><a href="/legal/mentions-legales/">Mentions légales</a></div></div>
     <div class="footer-bottom"><span>© 2026 DYLETH SAS</span><span><a href="mailto:contact@dyleth.com">contact@dyleth.com</a> · <a href="mailto:dpo@dyleth.com">dpo@dyleth.com</a></span></div>
   </div>
 </footer>
