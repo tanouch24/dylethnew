@@ -3,18 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DYLETH — Bouclier Numérique Personnel · Protection 7-en-1</title>
-  <meta name="description" content="DYLETH : bouclier numérique personnel. 7 modules de protection contre appels, SMS, emails, URLs et WiFi. Développée en France, RGPD natif, conçue pour renforcer votre sécurité numérique.">
+  <title>DYLETH — Détectez les arnaques avant d'agir · Protection 7-en-1</title>
+  <meta name="description" content="DYLETH alerte sur les appels frauduleux, SMS suspects et liens de phishing avant que vous n'agissiez. Gratuit, RGPD natif, développé en France.">
   <link rel="canonical" href="https://dyleth.com/">
+  <meta name="theme-color" content="#04060e">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="DYLETH — Bouclier Numérique Personnel · Protection 7-en-1">
-  <meta property="og:description" content="DYLETH : bouclier numérique personnel. 7 modules de protection contre appels, SMS, emails, URLs et WiFi. Développée en France, RGPD natif, conçue pour renforcer votre sécurité numérique.">
+  <meta property="og:title" content="DYLETH — Détectez les arnaques avant d'agir">
+  <meta property="og:description" content="DYLETH alerte sur les appels frauduleux, SMS suspects et liens de phishing avant que vous n'agissiez. Gratuit, RGPD natif, développé en France.">
   <meta property="og:url" content="https://dyleth.com/">
   <meta property="og:locale" content="fr_FR">
+  <meta property="og:image" content="https://dyleth.com/assets/og/dyleth-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DYLETH — Détectez les arnaques avant d'agir">
+  <meta name="twitter:description" content="DYLETH alerte sur les appels frauduleux, SMS suspects et liens de phishing avant que vous n'agissiez. Gratuit, RGPD natif.">
+  <meta name="twitter:image" content="https://dyleth.com/assets/og/dyleth-og.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/favicon.svg">
   <link rel="preload" href="/css/main.css?v=20260528-2" as="style">
   <link rel="stylesheet" href="/css/main.css?v=20260528-2">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "DYLETH",
+    "applicationCategory": "SecurityApplication",
+    "operatingSystem": ["iOS", "Android"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "description": "DYLETH détecte les appels frauduleux, SMS suspects, liens de phishing et réseaux WiFi dangereux en temps réel. Gratuit, Privacy by Design, développé en France.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "DYLETH SAS",
+      "url": "https://dyleth.com",
+      "email": "contact@dyleth.com"
+    }
+  }
+  </script>
 </head>
 <body class="home">
 <header class="site-header">
@@ -34,9 +63,9 @@
       <span class="d2-ambient-dot d2-ambient-dot-c"></span>
     </div>
     <div class="d2-hero-copy">
-      <p class="d2-eyebrow">Vérification silencieuse. Protection réelle.</p>
-      <h1>Votre bouclier numérique</h1>
-      <p class="d2-lead">DYLETH vérifie appels, SMS, emails, liens et réseaux WiFi avant interaction, avec un score de confiance lisible et une alerte claire quand le risque augmente.</p>
+      <p class="d2-eyebrow">Appels frauduleux · SMS suspects · Liens dangereux</p>
+      <h1>Protégez-vous avant de décrocher</h1>
+      <p class="d2-lead">DYLETH analyse chaque appel entrant, SMS et lien en temps réel. Vous recevez une alerte claire avant d'agir — pas après avoir perdu de l'argent.</p>
       <div class="d2-store-row" aria-label="Téléchargement de l'application">
         <a class="d2-store-badge d2-store-badge-apple" href="#telecharger" aria-label="Télécharger dans l'App Store">
           <img src="/assets/store/app-store-fr.svg" alt="Télécharger dans l'App Store" width="126" height="40">
@@ -75,46 +104,46 @@
 
   <section class="d2-section d2-detection">
     <div class="d2-section-head">
-      <p class="d2-eyebrow">Moteur de vérification</p>
-      <h2>Une décision compréhensible, pas une alerte opaque.</h2>
-      <p>Chaque signal est ramené à une lecture simple : ce qui est analysé, pourquoi le risque monte, et quelle action éviter.</p>
+      <p class="d2-eyebrow">DYLETH en action</p>
+      <h2>Trois situations réelles. Trois alertes claires.</h2>
+      <p>Chaque menace est analysée avant que vous n'agissiez : le risque est visible, l'action à éviter est précise.</p>
     </div>
     <div class="d2-detection-grid">
       <article>
+        <span class="d2-detection-type">Appel</span>
+        <p class="d2-sample">"Bonjour, service fraude de votre banque. Confirmez votre code pour sécuriser votre compte immédiatement."</p>
+        <dl>
+          <div><dt>Numéro</dt><dd>Non enregistré, usurpé</dd></div>
+          <div><dt>Schéma</dt><dd>Faux conseiller bancaire</dd></div>
+          <div><dt>Score</dt><dd>11/100</dd></div>
+        </dl>
+        <strong>Ne pas décrocher · Rappeler via votre agence</strong>
+      </article>
+      <article>
         <span class="d2-detection-type">SMS</span>
-        <p class="d2-sample">"Votre colis est bloqué. Régularisez 1,95 EUR avant minuit."</p>
+        <p class="d2-sample">"Votre colis est bloqué. Régularisez 1,95 EUR avant minuit pour éviter le retour."</p>
         <dl>
           <div><dt>Domaine</dt><dd>Imitation logistique</dd></div>
           <div><dt>Pression</dt><dd>Urgence artificielle</dd></div>
           <div><dt>Score</dt><dd>18/100</dd></div>
         </dl>
-        <strong>Interaction déconseillée</strong>
+        <strong>Ne pas cliquer · Supprimer le message</strong>
       </article>
       <article>
-        <span class="d2-detection-type">Email</span>
-        <p class="d2-sample">Demande de virement interne reçue depuis une adresse proche du domaine réel.</p>
+        <span class="d2-detection-type">Lien</span>
+        <p class="d2-sample">Email reçu : "ameli-remboursement-2026.fr" — Votre remboursement est disponible, renseignez vos coordonnées.</p>
         <dl>
-          <div><dt>Expéditeur</dt><dd>Domaine ressemblant</dd></div>
-          <div><dt>Contexte</dt><dd>Montant inhabituel</dd></div>
-          <div><dt>Score</dt><dd>31/100</dd></div>
+          <div><dt>Domaine</dt><dd>Typosquatting Ameli</dd></div>
+          <div><dt>Contenu</dt><dd>Collecte bancaire</dd></div>
+          <div><dt>Score</dt><dd>9/100</dd></div>
         </dl>
-        <strong>Vérification manuelle requise</strong>
-      </article>
-      <article>
-        <span class="d2-detection-type">WiFi</span>
-        <p class="d2-sample">Réseau public ouvert avec nom proche d'un établissement connu.</p>
-        <dl>
-          <div><dt>Chiffrement</dt><dd>Absent</dd></div>
-          <div><dt>Nom réseau</dt><dd>Usurpation probable</dd></div>
-          <div><dt>Score</dt><dd>42/100</dd></div>
-        </dl>
-        <strong>Connexion à éviter</strong>
+        <strong>Lien bloqué · Accéder uniquement via ameli.fr</strong>
       </article>
     </div>
   </section>
 
   <section class="d2-feature-strip" aria-label="Fonctionnalités clés">
-    <article><img class="d2-icon" src="/assets/icons/dyleth-wifi.svg" alt="" width="32" height="32"><span>01</span><h2>Analyse en temps réel</h2><p>Détection instantanée des menaces.</p></article>
+    <article><img class="d2-icon" src="/assets/icons/dyleth-wifi.svg" alt="" width="32" height="32"><span>01</span><h2>Analyse en temps réel</h2><p>Avant le clic, avant le décrochage.</p></article>
     <article><img class="d2-icon" src="/assets/icons/dyleth-lock-shield.svg" alt="" width="32" height="32"><span>02</span><h2>Score de confiance clair</h2><p>Évaluez le risque de chaque interaction.</p></article>
     <article><img class="d2-icon" src="/assets/icons/dyleth-sms.svg" alt="" width="32" height="32"><span>03</span><h2>Alertes compréhensibles</h2><p>Des explications simples, des actions concrètes.</p></article>
     <article><img class="d2-icon" src="/assets/icons/dyleth-link.svg" alt="" width="32" height="32"><span>04</span><h2>Signalements anonymisés</h2><p>Contribuez à protéger la communauté.</p></article>
@@ -179,6 +208,19 @@
     <a class="d2-link" href="/menace/chiffres-cles/">Explorer les chiffres</a>
   </section>
 
+  <section class="d2-section d2-light" aria-labelledby="pourquoi-heading">
+    <div class="d2-section-head">
+      <p class="d2-eyebrow">Pourquoi installer DYLETH ?</p>
+      <h2 id="pourquoi-heading">Concret. Gratuit. Pour tous.</h2>
+      <p>Pas de jargon technique. Pas de configuration complexe. Une protection qui s'installe en deux minutes et fonctionne en silence.</p>
+    </div>
+    <div class="d2-card-grid">
+      <article><img class="d2-icon" src="/assets/icons/dyleth-call.svg" alt="" width="32" height="32"><h3>Protéger ses proches</h3><p>Les personnes âgées et les enfants sont les premières cibles des arnaques téléphoniques. DYLETH alerte avant qu'il soit trop tard.</p></article>
+      <article><img class="d2-icon" src="/assets/icons/dyleth-sms.svg" alt="" width="32" height="32"><h3>Ne plus tomber dans le piège</h3><p>Un SMS de colis suspect, un appel de banque trop insistant, un lien reçu par email. DYLETH répond en une seconde.</p></article>
+      <article><img class="d2-icon" src="/assets/icons/dyleth-link.svg" alt="" width="32" height="32"><h3>Réduire les appels indésirables</h3><p>Blocage silencieux des numéros suspects avant le décrochage. Moins d'interruptions, moins de risques, plus de sérénité.</p></article>
+    </div>
+  </section>
+
   <section class="d2-flow" aria-label="De la menace à la protection">
     <article><span>Menace</span><h2>Le signal est brouillé.</h2><p>Faux conseillers, SMS piégés, URLs usurpées et deepfakes rendent la fraude plus difficile à lire.</p></article>
     <article><span>Analyse</span><h2>DYLETH vérifie.</h2><p>Chaque vecteur est analysé selon son contexte, avec une priorité donnée au traitement local et à la minimisation.</p></article>
@@ -195,25 +237,30 @@
       <a href="/secteurs/tpe-pme/">TPE-PME</a>
       <a href="/secteurs/administrations/">Administrations</a>
       <a href="/secteurs/sante/">Santé</a>
-      <a href="/secteurs/banques-assurances/">Banques & assurances</a>
+      <a href="/secteurs/banques-assurances/">Banques &amp; assurances</a>
       <a href="/secteurs/enseignement/">Enseignement</a>
     </div>
   </section>
 
   <section class="d2-cta" id="telecharger">
-    <p class="d2-eyebrow">Disponible début juin 2026</p>
-    <h2>Une protection claire, gratuite et prête pour le quotidien.</h2>
-    <p>DYLETH protège appels, SMS, emails, URLs et réseaux WiFi, avec une approche Privacy by Design et une infrastructure pensée pour l'Europe.</p>
-    <div class="d2-store-row" aria-label="Téléchargement de l'application">
-      <a class="d2-store-badge d2-store-badge-apple" href="#telecharger" aria-label="Télécharger dans l'App Store"><img src="/assets/store/app-store-fr.svg" alt="Télécharger dans l'App Store" width="126" height="40"></a>
-      <a class="d2-store-badge d2-store-badge-google" href="#telecharger" aria-label="Disponible sur Google Play"><img src="/assets/store/google-play-fr.png" alt="Disponible sur Google Play" width="646" height="250"></a>
+    <p class="d2-eyebrow">Lancement début juin 2026</p>
+    <h2>Soyez les premiers à télécharger DYLETH.</h2>
+    <p>Gratuit sur iOS et Android. Inscrivez-vous pour recevoir le lien de téléchargement dès la disponibilité.</p>
+    <div class="d2-store-row" aria-label="Accès au lancement">
+      <a class="d2-store-badge d2-store-badge-apple" href="mailto:contact@dyleth.com?subject=Acc%C3%A8s%20lancement%20DYLETH" aria-label="Être alerté au lancement sur iOS">
+        <img src="/assets/store/app-store-fr.svg" alt="Être alerté — App Store" width="126" height="40">
+      </a>
+      <a class="d2-store-badge d2-store-badge-google" href="mailto:contact@dyleth.com?subject=Acc%C3%A8s%20lancement%20DYLETH" aria-label="Être alerté au lancement sur Android">
+        <img src="/assets/store/google-play-fr.png" alt="Être alerté — Google Play" width="646" height="250">
+      </a>
     </div>
+    <a class="d2-link" href="mailto:contact@dyleth.com?subject=Acc%C3%A8s%20lancement%20DYLETH" aria-label="Être alerté par email au lancement de DYLETH">Être alerté par email au lancement →</a>
   </section>
 </main>
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand"><img src="/logo.svg" alt="" width="34" height="34"><strong>DYLETH</strong><p>Vérification silencieuse des appels, messages, liens et réseaux. Développé en France, conçu pour protéger sans collecter.</p></div>
-    <div class="footer-links"><div><h2>Produit</h2><a href="/solution/7-modules/">Modules de protection</a><a href="/solution/technologie/">Moteur de détection</a><a href="/solution/privacy-by-design/">Privacy by Design</a><a href="/solution/rgpd/">Conformité RGPD</a></div><div><h2>Comprendre</h2><a href="/menace/">La menace</a><a href="/menace/types-de-fraudes/">Types de fraudes</a><a href="/comprendre/phishing/">Phishing</a><a href="/comprendre/smishing/">Smishing</a></div><div><h2>Usages</h2><a href="/secteurs/particuliers/">Particuliers</a><a href="/secteurs/tpe-pme/">TPE-PME</a><a href="/secteurs/administrations/">Administrations</a><a href="/secteurs/sante/">Santé</a></div><div><h2>Société</h2><a href="/a-propos/mission/">Mission</a><a href="/ressources/blog/">Ressources</a><a href="/legal/confidentialite/">Confidentialité</a><a href="/legal/mentions-legales/">Mentions légales</a></div></div>
+    <div class="footer-links"><div><p class="footer-heading">Produit</p><a href="/solution/7-modules/">Modules de protection</a><a href="/solution/technologie/">Moteur de détection</a><a href="/solution/privacy-by-design/">Privacy by Design</a><a href="/solution/rgpd/">Conformité RGPD</a></div><div><p class="footer-heading">Comprendre</p><a href="/menace/">La menace</a><a href="/menace/types-de-fraudes/">Types de fraudes</a><a href="/comprendre/phishing/">Phishing</a><a href="/comprendre/smishing/">Smishing</a></div><div><p class="footer-heading">Usages</p><a href="/secteurs/particuliers/">Particuliers</a><a href="/secteurs/tpe-pme/">TPE-PME</a><a href="/secteurs/administrations/">Administrations</a><a href="/secteurs/sante/">Santé</a></div><div><p class="footer-heading">Société</p><a href="/a-propos/mission/">Mission</a><a href="/ressources/blog/">Ressources</a><a href="/legal/confidentialite/">Confidentialité</a><a href="/legal/mentions-legales/">Mentions légales</a></div></div>
     <div class="footer-bottom"><span>© 2026 DYLETH SAS</span><span><a href="mailto:contact@dyleth.com">contact@dyleth.com</a> · <a href="mailto:dpo@dyleth.com">dpo@dyleth.com</a></span></div>
   </div>
 </footer>
