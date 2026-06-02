@@ -4329,6 +4329,26 @@ button,
   background: rgba(255, 255, 255, 0.025);
 }
 
+.d2-trust-phrase {
+  margin-top: 20px;
+  color: var(--d2-muted);
+  font-size: 13px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+.d2-disclaimer {
+  width: min(var(--d2-max), calc(100% - 56px));
+  margin: 0 auto 64px;
+  padding: 16px 22px;
+  border: 1px solid var(--d2-line);
+  border-radius: var(--d2-radius-sm);
+  color: var(--d2-faint);
+  font-size: 12px;
+  line-height: 1.65;
+  text-align: center;
+}
+
 .d2-device {
   position: relative;
   min-width: 0;
