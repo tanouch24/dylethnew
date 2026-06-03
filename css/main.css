@@ -5831,3 +5831,231 @@ body:not(.home) .threat-section h2 em {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   PHASE 2 — FORM INSCRIPTION (Netlify Forms)
+   ═══════════════════════════════════════════════════════════ */
+.d2-form-section {
+  text-align: center;
+}
+.d2-form-section .d2-eyebrow { justify-content: center; }
+.d2-form-section .d2-section-head h2,
+.d2-form-section p:not(.d2-eyebrow) {
+  margin-left: auto;
+  margin-right: auto;
+}
+.d2-form-section .d2-section-head p { max-width: 600px; }
+
+.d2-form {
+  max-width: 600px;
+  margin: 36px auto 0;
+}
+.d2-form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.d2-input {
+  flex: 1;
+  min-width: 140px;
+  height: 52px;
+  padding: 0 18px;
+  border: 1px solid var(--d2-line);
+  border-radius: var(--d2-radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--d2-ink);
+  font-size: 15px;
+  font-family: inherit;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.d2-input::placeholder { color: var(--d2-faint); }
+.d2-input:focus {
+  outline: none;
+  border-color: var(--d2-blue);
+  box-shadow: 0 0 0 3px rgba(41, 151, 255, 0.14);
+}
+.d2-form-btn {
+  position: relative;
+  overflow: hidden;
+  height: 52px;
+  padding: 0 28px;
+  border: 0;
+  border-radius: var(--d2-radius-sm);
+  background: linear-gradient(180deg, #3aa3ff, #1a7de8);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s;
+  box-shadow: 0 14px 38px rgba(41, 151, 255, 0.32);
+}
+.d2-form-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 0 35%, rgba(255,255,255,0.22), transparent 65%);
+  transform: translateX(-120%);
+  transition: transform 0.55s ease;
+}
+.d2-form-btn:hover { transform: translateY(-1px); box-shadow: 0 18px 46px rgba(41, 151, 255, 0.42); }
+.d2-form-btn:hover::before { transform: translateX(120%); }
+.d2-form-btn:disabled { opacity: 0.6; cursor: default; transform: none; box-shadow: none; }
+.d2-form-honey { display: none; }
+.d2-form-note {
+  margin-top: 14px;
+  color: var(--d2-faint);
+  font-size: 12px;
+  letter-spacing: 0.01em;
+}
+.d2-form-success {
+  display: none;
+  max-width: 480px;
+  margin: 36px auto 0;
+  padding: 28px 32px;
+  border: 1px solid rgba(48, 209, 88, 0.28);
+  border-radius: var(--d2-radius);
+  background: rgba(48, 209, 88, 0.06);
+  text-align: center;
+}
+.d2-form-success.is-visible { display: block; }
+.d2-form-success strong {
+  display: block;
+  color: #30d158;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.d2-form-success p { color: var(--d2-muted); font-size: 14px; margin: 0; }
+
+@media (max-width: 560px) {
+  .d2-form-group { flex-direction: column; }
+  .d2-input, .d2-form-btn { width: 100%; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PHASE 3 — FAQ HOMEPAGE
+   ═══════════════════════════════════════════════════════════ */
+.d2-faq .d2-eyebrow { justify-content: center; }
+.d2-faq-list {
+  max-width: 720px;
+  margin: 42px auto 0;
+  text-align: left;
+}
+.d2-faq-item { border-bottom: 1px solid var(--d2-line); }
+.d2-faq-item:first-child { border-top: 1px solid var(--d2-line); }
+.d2-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(245, 245, 247, 0.86);
+  list-style: none;
+  user-select: none;
+  transition: color 0.16s ease;
+}
+.d2-faq-question::-webkit-details-marker { display: none; }
+.d2-faq-question::after {
+  content: "+";
+  flex-shrink: 0;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--d2-blue);
+  line-height: 1;
+  transition: transform 0.22s ease;
+}
+.d2-faq-item[open] .d2-faq-question { color: #fff; }
+.d2-faq-item[open] .d2-faq-question::after { transform: rotate(45deg); }
+.d2-faq-answer {
+  padding-bottom: 24px;
+  color: var(--d2-muted);
+  font-size: 15px;
+  line-height: 1.72;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PHASE 6 — MICRO-INTERACTIONS
+   ═══════════════════════════════════════════════════════════ */
+.d2-detection-grid article {
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+.d2-detection-grid article:hover {
+  transform: translateY(-4px);
+  border-color: rgba(41, 151, 255, 0.38);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+}
+.d2-stat-grid article {
+  transition: transform 0.22s ease, border-color 0.22s ease;
+}
+.d2-stat-grid article:hover {
+  transform: translateY(-2px);
+  border-color: rgba(41, 151, 255, 0.28);
+}
+.d2-sector-grid a {
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+.d2-sector-grid a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(41, 151, 255, 0.34);
+  background: rgba(41, 151, 255, 0.06);
+}
+.d2-faq-item {
+  transition: background 0.16s ease;
+}
+.d2-faq-item[open] {
+  background: rgba(255, 255, 255, 0.018);
+}
+
+/* Stagger reveal pour grilles */
+.d2-detection-grid article.reveal,
+.d2-card-grid article.reveal,
+.d2-stat-grid article.reveal {
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.d2-detection-grid article.reveal:nth-child(2) { transition-delay: 80ms; }
+.d2-detection-grid article.reveal:nth-child(3) { transition-delay: 160ms; }
+.d2-card-grid article.reveal:nth-child(2) { transition-delay: 80ms; }
+.d2-card-grid article.reveal:nth-child(3) { transition-delay: 160ms; }
+.d2-stat-grid article.reveal:nth-child(2) { transition-delay: 80ms; }
+.d2-stat-grid article.reveal:nth-child(3) { transition-delay: 160ms; }
+
+/* Animation score orb au scroll */
+@keyframes d2ScoreReveal {
+  from { transform: scale(0.82); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+.d2-score-orb.is-animated {
+  animation: d2ScoreReveal 0.65s cubic-bezier(0.34, 1.42, 0.64, 1) forwards;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PHASE 8 — ACCESSIBILITÉ
+   ═══════════════════════════════════════════════════════════ */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  padding: 10px 18px;
+  background: var(--d2-blue);
+  color: #fff;
+  border-radius: 0 0 8px 8px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: top 0.18s ease;
+}
+.skip-link:focus { top: 0; outline: 2px solid #fff; }
+
+:focus-visible {
+  outline: 2px solid var(--d2-blue);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+/* Sauf sur les éléments qui ont déjà leur propre style focus */
+.d2-input:focus-visible { outline: none; }
